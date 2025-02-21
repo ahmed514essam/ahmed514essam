@@ -1,5 +1,6 @@
 .bageContact {
-    height: 100%;
+    min-height: auto;
+    height: 100vh;
     width: 100%;
     background-color: hsla(207, 62%, 9%, 0.997) ;
 margin-top: 70px;
@@ -16,7 +17,7 @@ margin-bottom:0px ;
 @media (max-width:1200px) {
   
     .bageContact {
-        height: 100vh;
+        height: 80vh;
         width: 100%;
         background-color: hsla(207, 62%, 9%, 0.997) ;
     margin-top: 70px;
@@ -112,20 +113,40 @@ transition: .5s ease;
 @media (max-width:900px) {
   
     .bageContact {
-        height: 100vh;
+        min-height: auto;
+        height: 100%;
         width: 100%;
         background-color: hsla(207, 62%, 9%, 0.997) ;
     margin-top: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom:0px ;
-
+padding: 20px 0 100px 0;
     }
     .continueContct {
         width: 80%;
      
     }
 }
+
+
+@media (min-width:450px) and (max-width:855px) {
+    .bageContact {
+        min-height: auto;
+        height: 100vh;
+        padding: 20px 0 100px 0;
+    }
+}
+
+
+
+
+
 @media (max-width:531px) {
+    .bageContact {
+        min-height: auto;
+    height: 100%;
+    padding: 20px 0 100px 0;
+    }
     .continueContct {
         width: 95%;
      
@@ -153,7 +174,11 @@ cursor: pointer;
 
 
 @media (max-width:421px) {
-
+.bageContact {
+    min-height: auto;
+height: 100%;
+padding: 20px 0 100px 0;
+}
   
     .nameFraction , .emailFraction , .cityFraction , .messageFraction , .sendingButton {
         width: 100%;
