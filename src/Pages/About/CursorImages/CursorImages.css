@@ -11,8 +11,8 @@ border-radius: 10px;
     height: 100%;object-fit: cover;
 }
 .changePicture {
-    background-color: rgb(0, 0, 0);
-    height: 30px;
+    background-color: rgb(74, 74, 74);
+    height: 60px;
     width: 35px;
     bottom: 0;
     margin: auto;

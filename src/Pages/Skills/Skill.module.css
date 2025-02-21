@@ -33,13 +33,21 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: 1.2em;
 font-weight: 700;
 }
+@media (max-width:1163px) {
+    .skillSection {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+            }
+    
 @media (max-width:519px) {
     .btnCategories button {
-        margin-bottom: 16px;
+        margin-bottom: 0px;
     }
 }
 @media (max-width:479px) {
     .btnCategories button {
-        margin-bottom: 15px;
+        margin-bottom: 0px;
     }
 }

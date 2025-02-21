@@ -1,7 +1,7 @@
   import style from "./Home.module.css" ;
 //   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSnowflake } from "@fortawesome/free-solid-svg-icons";
-// import PersonalImage from "../../../public/PersonalImage/one.png"
+import PersonalImage from "../../../public/PersonalImage/two.png"
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faLinkedinIn, faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -11,7 +11,7 @@ import { faFacebookF, faLinkedinIn, faGithub, faWhatsapp } from "@fortawesome/fr
 
  const name = "I'm Ahmed Essam El Sayed" ;
 
- const PersonalImage = "PersonalImage/two.png";
+//  const PersonalImage = "PersonalImage/two.png";
 
 
 

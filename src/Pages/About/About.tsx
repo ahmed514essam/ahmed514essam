@@ -7,15 +7,16 @@ const About = () => {
   return (
     <>
       <section className={style.sectionAboutMe}>
-        <div className={style.AllBody}>
 
-          <div className={style.cardMe}>
-<span>
+<span className={style.ooo}>
             <div className={style.imagess}>
               <CursorImages />
             </div>
 </span>
-<span>
+<span className={style.oot}>
+
+
+
             <div className={style.personData}>
               <p>
                 Name :{" "}
@@ -63,9 +64,15 @@ const About = () => {
 
 
 
-          </div>
 
-          <div className={style.infoMe}>
+
+</section>
+
+
+
+
+          <section className={style.infoMe}>
+            {/* <span className={style.allContentSpanWho}> */}
             <div className={style.whome}>
               <h2>
                 Who am I<span>?</span>
@@ -104,13 +111,9 @@ const About = () => {
               </p>
               <a href="https://drive.google.com/file/d/1DH96jq-mVLTynMliffdSOQdJL2dHR5ey/view" target="_blank" className={style.openCertificate}><FontAwesomeIcon icon={faLink} /> Open</a>
             </div>
-            <span className={style.spanHireMe}>
-            <a className={style.hireMeBtn} href="mailto:your-ahmedessaam124@gmail.com?subject=Hello&body=I%20want%20to%20reach%20out">Hire Me</a>
-          </span>
-          </div>
+           {/* </span> */}
 
 
-        </div>
 
 
       </section>

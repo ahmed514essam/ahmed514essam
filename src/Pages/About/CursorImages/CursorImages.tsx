@@ -3,6 +3,8 @@ import OneI from "../../../../public/aboutImages/one.jpeg" ;
 import TwoI from "../../../../public/aboutImages/two.jpg" ;
 import ThreeI from "../../../../public/aboutImages/three.jpg" ;
 import FourI from "../../../../public/aboutImages/four.jpg" ;
+import FiveI from "../../../../public/aboutImages/five.jpg" ;
+import SexI from "../../../../public/aboutImages/sex.jpg" ;
 
 const CursorImages = () => {
 
@@ -14,6 +16,9 @@ const CursorImages = () => {
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
 
   </div>
   <div className="carousel-inner">
@@ -29,6 +34,13 @@ const CursorImages = () => {
     <div className="carousel-item imgy">
       <img src={FourI} className="d-block w-100" alt="My fourth images"/>
     </div>
+    <div className="carousel-item imgy">
+      <img src={FiveI} className="d-block w-100" alt="My Five images"/>
+    </div>
+    <div className="carousel-item imgy">
+      <img src={SexI} className="d-block w-100" alt="My Sex images"/>
+    </div>
+    
   </div>
   <button className="carousel-control-prev changePicture " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
