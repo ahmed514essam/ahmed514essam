@@ -54,7 +54,7 @@ A software developer specializing in front-end development with React JS and Nex
 
 
 <section  className={style.sectionDownload}>
-<a rel="noreferrer" target="_self" href="https://drive.google.com/uc?export=download&id=11jTqpUULT9SKcTv8kZSPqnh-_euQ1iLP" download="My_Resume.pdf">
+<a rel="noreferrer" target="_self" href="https://drive.google.com/file/d/1J3dwfnHkJqwDAumYVSGYBDfkcSoN3ngW/view?usp=sharing" download="My_Resume.pdf">
 Download My Resume</a>
 </section>
 

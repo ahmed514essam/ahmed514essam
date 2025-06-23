@@ -34,9 +34,15 @@ const About = () => {
                 <span className={style.answersData}>+20 109 446 1846</span>
               </p>
               <p>
-                Address :{" "}
+                From :{" "}
                 <span className={style.answersData}>
                   Meet Ghamr, Ad Daqahliyah, Egypt
+                </span>
+              </p>
+                <p>
+                Address :{" "}
+                <span className={style.answersData}>
+                  Cairo , Egypt
                 </span>
               </p>
               <p>

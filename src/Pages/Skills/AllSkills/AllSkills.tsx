@@ -17,6 +17,9 @@ const AllSkills = () => {
         { name: "C#", img: "/skills/SharpC.png" },
         { name: "SQL", img: "/skills/sql.png" },
         { name: "Web Design", img: "/skills/design.png" },
+         {name:"OOP" , img: "/skills/OOP.png"},
+        {name:"Proplem Solving" , img:"/skills/ProplemSolving.png"},
+        {name:"Data Structure" , img: "/skills/DS.png"}
       ];
     return (
         <>
