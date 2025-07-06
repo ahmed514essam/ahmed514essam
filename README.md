@@ -1,4 +1,4 @@
-# React JS + TypeScript + Vite
+# React JS + TypeScript + C# 
 #A software developer specializing in front-end development with React JS and Next JS, utilizing JavaScript. I am dedicated to continually enhancing my skills and experience and am excited to collaborate with you to deliver well-organized and high-quality software solutions.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
