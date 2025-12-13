@@ -1,51 +1,53 @@
-# React JS + TypeScript + C# 
-#A software developer specializing in front-end development with React JS and Next JS, utilizing JavaScript. I am dedicated to continually enhancing my skills and experience and am excited to collaborate with you to deliver well-organized and high-quality software solutions.
+# ASP.NET Core + SQL Server + Clean Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I am a backend software developer specializing in building scalable, secure, and well‑structured web applications using **ASP.NET Core**, **Entity Framework Core**, **SQL Server**, and **Clean Architecture** principles.  
+I focus on writing clean, maintainable code, implementing robust authentication/authorization flows with **Identity**, and integrating modern services such as **Cloudinary**, **SMTP**, and **REST APIs**.
 
-Currently, two official plugins are available:
+I am continuously improving my skills and excited to collaborate on real‑world projects that require strong backend logic, clear architecture, and high‑quality engineering practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✅ Technologies & Tools I Work With
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **ASP.NET Core MVC / Web API**
+- **Entity Framework Core**
+- **SQL Server**
+- **Identity (Authentication & Authorization)**
+- **Repository Pattern + Unit of Work**
+- **Dependency Injection**
+- **Node.js / Express**
+- **MongoDB**
+- **Cloudinary Image Hosting**
+- **Docker (beginner–intermediate)**
+- **Git & GitHub**
+- **Clean Architecture & Layered Architecture**
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✅ What I Focus On
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Building production‑ready backend systems  
+- Designing clean and maintainable project structures  
+- Implementing secure user management (roles, claims, email confirmation)  
+- Creating admin dashboards with full CRUD operations  
+- Integrating external services (Cloudinary, SMTP, Payment gateways)  
+- Writing reusable services, repositories, and middleware  
+- Preparing projects for deployment on Windows hosting, Docker, or cloud platforms  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## ✅ My Development Philosophy
+
+I believe in:
+- Writing **clean, readable, and testable code**
+- Following **best practices** in architecture and security
+- Ensuring **scalability** and **performance**
+- Delivering **real‑world solutions**, not just code that works
+- Continuous learning and improving my craft
+
+---
+
+## ✅ Example Project Setup (ASP.NET Core MVC)
+
+A typical project I build includes:
+
