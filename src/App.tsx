@@ -7,6 +7,8 @@ import About from "./Pages/About/About";
 import Skills from "./Pages/Skills/Skills";
 import Projects from "./Pages/Projects/Projects";
 import Contact from "./Pages/ContactUs/Contact";
+import MainDashboard from "./Pages/Dashboard/MainDashboard";
+import Login from "./Pages/Dashboard/Login";
 
 
 
@@ -24,6 +26,11 @@ function App() {
  <Route path="/myskills" element={<Skills/>}/>
  <Route path="/myprojects" element={<Projects/>} />
  <Route path="contactme" element={<Contact/>} />
+<Route path="/maindashboard" element={<MainDashboard/>}/>
+  <Route path="/login" element={<Login />} />
+;
+
+
 
 
         </Route>
