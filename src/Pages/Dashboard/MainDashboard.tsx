@@ -31,7 +31,7 @@ const Dashboard = () => {
             <p>Edit your personal info</p>
           </div>
 
-          <div className={styles.card} onClick={() => navigate("/projects")}>
+          <div className={styles.card} onClick={() => navigate("./ProjectDash/ShowProject.tsx")}>
             <h2>Projects</h2>
             <p>Manage your projects</p>
           </div>

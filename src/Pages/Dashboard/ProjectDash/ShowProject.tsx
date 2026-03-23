@@ -1,9 +1,11 @@
-import styles from "./Project.module.css";
+import styles from "./ShowProject.module.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface DataItem {
   id: number; // لازم يكون عندك id من الـ API
@@ -14,8 +16,8 @@ interface DataItem {
   demo: string;
   repo: string;
 }
-
 const Projects = () => {
+  const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<DataItem[]>([]);
@@ -72,10 +74,17 @@ const Projects = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
+
+
   return (
     <>
       <section className={styles.sectionContent}>
         <h1>My Projects</h1>
+
+<div className={styles.addedButtonDiv}>
+  <Link className={styles.linkSelfAdded} to={"./AddProject.tsx"}><i className="bi bi-plus"></i> Add Prooject</Link>
+</div>
+
 
         <div className={styles.contentProjects}>
           {data.map((item) => (
@@ -84,7 +93,7 @@ const Projects = () => {
                 <img src={item.image} alt={item.name} loading="lazy" />
               </div>
               <h3>{item.name}</h3>
-              <p className={styles.aboutProj}>{item.about}</p>
+              <p className={styles.subTitle}>{item.SubTitle}</p>
               <p className={styles.overParar} onClick={() => displayOverview(item)}>
                 More
               </p>
@@ -98,12 +107,17 @@ const Projects = () => {
                 </Link>
 
                 {/* زرار تعديل وحذف */}
-                <button
-                  className={styles.editButton}
-                  onClick={() => window.location.href = `/edit-project/${item.id}`}
-                >
-                  <FontAwesomeIcon icon={faEdit} /> Edit
-                </button>
+           
+
+<button
+  className={styles.editButton}
+  onClick={() => navigate(`/edit-project/${item.id}`)}
+>
+  <FontAwesomeIcon icon={faEdit} /> Edit
+</button>
+
+
+
                 <button className={styles.deleteButton} onClick={() => handleDelete(item.id)}>
                   <FontAwesomeIcon icon={faTrash} /> Delete
                 </button>

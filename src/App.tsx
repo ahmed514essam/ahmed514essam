@@ -9,7 +9,9 @@ import Projects from "./Pages/Projects/Projects";
 import Contact from "./Pages/ContactUs/Contact";
 import MainDashboard from "./Pages/Dashboard/MainDashboard";
 import Login from "./Pages/Dashboard/Login";
-
+import ShowProject from "./Pages/Dashboard/ProjectDash/ShowProject";
+import AddProject from "./Pages/Dashboard/ProjectDash/AddProject";
+import EditProject from "./Pages/Dashboard/ProjectDash/EditProject";
 
 
 
@@ -28,9 +30,9 @@ function App() {
  <Route path="contactme" element={<Contact/>} />
 <Route path="/maindashboard" element={<MainDashboard/>}/>
   <Route path="/login" element={<Login />} />
-;
-
-
+<Route path="/showProjects" element={<ShowProject />} />
+<Route path="/addProject" element={<AddProject />} />
+<Route path="/edit-project/:id" element={<EditProject />} />
 
 
         </Route>
