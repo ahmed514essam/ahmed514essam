@@ -1,0 +1,293 @@
+.sectionContent {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(207, 62%, 9%, 0.997) ;
+margin-top: 100px;
+padding-bottom: 30px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-bottom:0px ;
+
+}
+.addedButtonDiv {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+}
+.linkSelfAdded {
+    padding: 10px;
+    background-color: rgb(0, 0, 121);
+    font-weight: 600;
+    gap: 10px;
+}
+.sectionContent h1 {
+    padding-top: 50px;
+    color: rgb(70, 177, 196);
+    font-weight: 600;
+    text-align: center;
+}
+.contentProjects {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+gap: 20px;
+text-align: center;
+justify-content: center;
+}
+.card { 
+    width: 343px;
+    height: 550px;
+    background-color: hsla(209, 66%, 19%, 0.997) ;
+    border-radius: 12px;
+padding-bottom: 10px;
+overflow: hidden;
+}
+.imagess {
+height: 50%;
+width: 93%;
+margin: auto;
+margin-top: 8px;
+}
+.imagess img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+border-radius: 12px;
+}
+.card h3 {
+    padding-top: 8px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.card p {
+    color: rgb(200, 200, 200);
+
+}
+.card .divButtons {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.linkDemo {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+}
+.linkRepo {
+    font-size: 2em;
+    color: white;
+}
+.overParar {
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.overParar:hover {
+    color: rgb(70, 177, 196);
+}
+/* ========================================================================================== */
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal {
+    background-color: hsla(209, 66%, 19%, 0.997) ;
+    width: 400px;
+    height: 600px;
+    border-radius: 15px;
+}
+.closeButton {
+    border: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    background-color: hsla(209, 66%, 19%, 0.997) ;
+    border-radius: 15px;
+    color: rgb(139, 139, 139);
+}
+.cardov {
+    width: 100%;
+    height: 90%;
+    background-color: hsla(209, 66%, 19%, 0.997) ;
+}
+.imagessov img {
+    object-fit: cover;
+    width: 100%;
+    height: 1005;
+}
+.imagessov {
+height: 40%;
+}
+.cardov p {
+    color: rgb(200, 200, 200);
+    width: 95%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.cardov h3 {
+    color: white;
+    background-color: hsla(209, 66%, 19%, 0.997) ;
+    text-align: center;
+
+}
+.divButtonsov {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.linkdemOver {
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+.linkGithupOver {
+    font-size: 2em;
+    color: white;
+}
+@media (max-width:1272px) {
+    .contentProjects {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    }
+    .card { 
+        width: 343px;
+        height: 400px;
+        background-color: hsla(209, 66%, 19%, 0.997) ;
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width:1215px) {
+    .contentProjects {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    }
+    .card { 
+        width: 343px;
+        height: 400px;
+        background-color: hsla(209, 66%, 19%, 0.997) ;
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width:1161px) {
+    .contentProjects {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom:0px ;
+
+    }
+    .card { 
+        width: 360px;
+        height: 400px;
+        background-color: hsla(209, 66%, 19%, 0.997) ;
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width:830px) {
+    .contentProjects {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom:0px ;
+
+    }
+    .card { 
+        width: 343px;
+        height: 400px;
+        background-color: hsla(209, 66%, 19%, 0.997) ;
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width:750px) {
+    .contentProjects {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom:0px ;
+
+    }
+    .card { 
+        width: 373px;
+        height: 400px;
+        background-color: hsla(209, 66%, 19%, 0.997) ;
+        border-radius: 12px;
+    
+    }
+}
+@media (max-width:482px) {
+    .overlay {
+        justify-content: center;
+    }
+    .modal {
+        width: 90%;
+        margin: auto;
+    }
+   
+    .modal h3 {
+        font-size: 1.1em;
+    }
+    .modal p {
+        font-size: .9em;
+    }
+}
+.aboutProj {
+    color: rgb(238, 238, 238);
+    text-align: center;
+    width: 95%;
+    margin: auto;
+    font-weight: 600;
+
+}
+@media (max-width:1163px) {
+    .sectionContent {
+        padding-bottom: 50px;
+    }
+            }
+    
