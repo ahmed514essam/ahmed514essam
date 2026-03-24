@@ -1,45 +1,65 @@
-import { useState } from "react";
-import style from "./Skill.module.css";
-import AllSkills from "./AllSkills/AllSkills";
-import FrontendSkills from "./FrontendSkills/FrontendSkills";
-import ProgrammingSkills from "./ProgrammingSkills/ProgrammingSkills";
-import "./Skily.css" ;
+import { useEffect, useState } from "react";
+import style from "./Skills.module.css";
 
-const Skills = () => {
-const [ category , setCategory ] = useState<number>(1);
+interface Skill {
+  id: number;
+  name: string;
+  type: string;
+  imageUrl: string;
+}
 
-const choOne = () => {
-setCategory(1)
-document.querySelector(".choOneClassOne")?.classList.add("tmtm");
-document.querySelector(".choTwoClassTwo")?.classList.remove("tmtm");
-document.querySelector(".choThreeClassThree")?.classList.remove("tmtm");
+interface Props {
+  filterType?: string;
 }
-const choTwo = () => {
-setCategory(2)
-document.querySelector(".choOneClassOne")?.classList.remove("tmtm");
-document.querySelector(".choTwoClassTwo")?.classList.add("tmtm");
-document.querySelector(".choThreeClassThree")?.classList.remove("tmtm");
-}
-const choThree = () => {
-setCategory(3)
-document.querySelector(".choOneClassOne")?.classList.remove("tmtm");
-document.querySelector(".choTwoClassTwo")?.classList.remove("tmtm");
-document.querySelector(".choThreeClassThree")?.classList.add("tmtm");
-}
+
+const SkillList = ({ filterType }: Props) => {
+  const [skills, setSkills] = useState<Skill[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://ahmed514essamapi.runasp.net/api/Skill")
+      .then((res) => res.json())
+      .then((data) => {
+        let result = data;
+
+        if (filterType) {
+          result = data.filter(
+            (skill: Skill) => skill.type.toLowerCase() === filterType.toLowerCase()
+          );
+        }
+
+        setSkills(result);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  }, [filterType]);
+
+  if (loading) return <p>Loading...</p>;
+
   return (
-    <section className={style.skillSection}>
-      <h1>My Skills</h1>
-  
-<div className={style.btnCategories}>
-  <button className="choOneClassOne tmtm" onClick={choOne}>ALL</button>
-  <button className="choTwoClassTwo" onClick={choTwo}>Frontend technique</button>
-  <button className="choThreeClassThree" onClick={choThree}>Programming technique</button>
-</div>
+    <div className={style.skillContent}>
+      {skills.map((skill) => (
+        <div key={skill.id} className={style.oneskill}>
+          <span className={style.nameofSkill}>{skill.name}</span>
 
-{category === 1 ? <AllSkills/> : category === 2 ? <FrontendSkills/> : category ===3 ? <ProgrammingSkills/> : null }
-
-    </section>
+          <span className={style.imgSpan}>
+            <img
+              src={
+                skill.imageUrl.startsWith("http")
+                  ? skill.imageUrl
+                  : `http://ahmed514essamapi.runasp.net${skill.imageUrl}`
+              }
+              alt={skill.name}
+              loading="lazy"
+            />
+          </span>
+        </div>
+      ))}
+    </div>
   );
 };
 
-export default Skills;
+export default SkillList;

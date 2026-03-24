@@ -12,6 +12,9 @@ import Login from "./Pages/Dashboard/Login";
 import ShowProject from "./Pages/Dashboard/ProjectDash/ShowProject";
 import AddProject from "./Pages/Dashboard/ProjectDash/AddProject";
 import EditProject from "./Pages/Dashboard/ProjectDash/EditProject";
+import ShowSkills from "./Pages/Dashboard/SkillDash/ShowSkills";
+import EditSkill from "./Pages/Dashboard/SkillDash/EditSkill";
+import AddSkill from "./Pages/Dashboard/SkillDash/AddSkill";
 
 
 
@@ -28,11 +31,17 @@ function App() {
  <Route path="/myskills" element={<Skills/>}/>
  <Route path="/myprojects" element={<Projects/>} />
  <Route path="contactme" element={<Contact/>} />
+ 
 <Route path="/maindashboard" element={<MainDashboard/>}/>
   <Route path="/login" element={<Login />} />
+
 <Route path="/showProjects" element={<ShowProject />} />
 <Route path="/addProject" element={<AddProject />} />
 <Route path="/edit-project/:id" element={<EditProject />} />
+
+<Route path="/showSkills" element={<ShowSkills />} />
+<Route path="/edit-skill/:id" element={<EditSkill />} />
+<Route path="/add-skill" element={<AddSkill />} />
 
 
         </Route>
