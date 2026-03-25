@@ -17,8 +17,15 @@ interface DataItem {
   repo: string;
 }
 const Projects = () => {
-  const navigate = useNavigate();
-  const [error, setError] = useState<string | null>(null);
+ const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<DataItem[]>([]);
   const [isOverviewOpen, setIsOverviewOpen] = useState<boolean>(false);

@@ -2,11 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 
+
 const Login = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
+
+
+
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,7 +36,7 @@ const Login = () => {
 
       localStorage.setItem("token", data.token);
 
-      navigate("/");
+      navigate("/Dashboard");
     } 
     catch (err: unknown) {
   if (err instanceof Error) {

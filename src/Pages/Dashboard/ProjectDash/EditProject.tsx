@@ -11,8 +11,16 @@ interface ProjectData {
 }
 
 const EditProject = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const { id } = useParams(); // 👈 نجيب id من URL
-  const navigate = useNavigate();
 
   const [form, setForm] = useState<ProjectData>({
     name: "",

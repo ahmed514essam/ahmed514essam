@@ -3,11 +3,19 @@ import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Certificate.module.css";
 
 const EditCertificate = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const { id } = useParams();
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [image, setImage] = useState("");
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCertificate = async () => {

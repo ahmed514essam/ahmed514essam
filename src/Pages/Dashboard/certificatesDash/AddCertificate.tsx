@@ -1,12 +1,20 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Certificate.module.css";
 
 const AddCertificate = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [image, setImage] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

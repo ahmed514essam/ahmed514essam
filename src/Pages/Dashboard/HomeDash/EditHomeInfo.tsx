@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./HomeInf.module.css";
+import { useNavigate } from "react-router-dom";
 
 interface HomeFormData {
   subTitle?: string;
@@ -13,6 +14,15 @@ interface HomeFormData {
 }
 
 const EditHome = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const [form, setForm] = useState<HomeFormData>({});
   const [image, setImage] = useState<File | null>(null);
 

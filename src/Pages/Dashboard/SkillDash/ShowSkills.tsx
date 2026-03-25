@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./SkillDashboard.module.css";
+import style from "./ShowSkills.module.css";
 
 interface Skill {
   id: number;
@@ -10,8 +10,16 @@ interface Skill {
 }
 
 const SkillDashboard = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const [skills, setSkills] = useState<Skill[]>([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://ahmed514essamapi.runasp.net/api/Skill")

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import styles from "./EditProject.module.css";
+import styles from "./EditSkill.module.css";
 
 interface SkillData {
   name: string;
@@ -9,8 +9,16 @@ interface SkillData {
 }
 
 const EditSkill = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const { id } = useParams(); // 👈 نجيب id من URL
-  const navigate = useNavigate();
 
   const [form, setForm] = useState<SkillData>({
     name: "",

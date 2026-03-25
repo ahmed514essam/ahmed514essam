@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./AboutInfo.module.css";
+import { useNavigate } from "react-router-dom";
 
 interface AboutFormData {
      Name?: string,
@@ -18,6 +19,17 @@ interface AboutFormData {
 }
 
 const EditAbout = () => {
+
+ const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
+
   const [form, setForm] = useState<AboutFormData>({});
   const [images, setImages] = useState<File[]>([]);
 

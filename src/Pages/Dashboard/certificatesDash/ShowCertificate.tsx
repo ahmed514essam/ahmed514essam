@@ -12,8 +12,16 @@ interface Certificate {
 }
 
 const AllCertificates = () => {
+   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
   const [certificates, setCertificates] = useState<Certificate[]>([]);
-  const navigate = useNavigate();
 
   // جلب البيانات من API
   const fetchCertificates = async () => {
