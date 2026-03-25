@@ -35,7 +35,7 @@ if (!res.ok) {
 }
 
 localStorage.setItem("token", data.token);
-navigate("/Dashboard");
+navigate("/maindashboard");
     } 
     catch (err: unknown) {
        console.error(err); // هتشوف أي error حقيقية في console
