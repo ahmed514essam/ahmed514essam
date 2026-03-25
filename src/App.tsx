@@ -15,6 +15,13 @@ import EditProject from "./Pages/Dashboard/ProjectDash/EditProject";
 import ShowSkills from "./Pages/Dashboard/SkillDash/ShowSkills";
 import EditSkill from "./Pages/Dashboard/SkillDash/EditSkill";
 import AddSkill from "./Pages/Dashboard/SkillDash/AddSkill";
+import AddAbout from "./Pages/Dashboard/AboutDash/AddAboutDash";
+import EditAbout from "./Pages/Dashboard/AboutDash/EditAboutDash";
+import AddCertificate from "./Pages/Dashboard/certificatesDash/AddCertificate";
+import EditCertificate from "./Pages/Dashboard/certificatesDash/EditCertificate";
+import AllCertificates from "./Pages/Dashboard/certificatesDash/AllCertificates";
+import AddHome from "./Pages/Dashboard/HomeDash/AddHomeInfo";
+import EditHome from "./Pages/Dashboard/HomeDash/EditHomeInfo";
 
 
 
@@ -43,6 +50,15 @@ function App() {
 <Route path="/edit-skill/:id" element={<EditSkill />} />
 <Route path="/add-skill" element={<AddSkill />} />
 
+<Route path="/addabout" element={<AddAbout />} />
+<Route path="editabout" element={<EditAbout />} />
+
+<Route path="/addcertificate" element={<AddCertificate />} />
+<Route path="/edit-certificate/:id" element={<EditCertificate />} />
+<Route path="/all-certificates" element={<AllCertificates />} />
+
+<Route path="addhome" element={<AddHome/>} />
+<Route path="edithome" element={<EditHome/>} />
 
         </Route>
       </Routes>
