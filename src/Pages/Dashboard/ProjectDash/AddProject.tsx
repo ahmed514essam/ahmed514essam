@@ -43,7 +43,7 @@ const AddProject = () => {
 
     try {
       const res = await fetch(
-        "http://ahmed514essamapi.runasp.net/api/Project",
+        "https://ahmed514essamapi.runasp.net/api/Project",
         {
           method: "POST",
           body: formData,

@@ -22,7 +22,7 @@ const SkillDashboard = () => {
   const [skills, setSkills] = useState<Skill[]>([]);
 
   useEffect(() => {
-    fetch("http://ahmed514essamapi.runasp.net/api/Skill")
+    fetch("https://ahmed514essamapi.runasp.net/api/Skill")
       .then(res => res.json())
       .then(data => setSkills(data))
       .catch(err => console.log(err));
@@ -35,7 +35,7 @@ const SkillDashboard = () => {
   const handleDelete = (id: number) => {
     const confirmDelete = window.confirm("هل أنت متأكد من حذف هذه المهارة؟");
     if (confirmDelete) {
-      fetch(`http://ahmed514essamapi.runasp.net/api/Skill/${id}`, {
+      fetch(`https://ahmed514essamapi.runasp.net/api/Skill/${id}`, {
         method: "DELETE"
       })
         .then(res => {
@@ -63,7 +63,7 @@ const SkillDashboard = () => {
               src={
                 skill.imageUrl.startsWith("http")
                   ? skill.imageUrl
-                  : `http://ahmed514essamapi.runasp.net${skill.imageUrl}`
+                  : `https://ahmed514essamapi.runasp.net${skill.imageUrl}`
               }
               alt={skill.name}
             />

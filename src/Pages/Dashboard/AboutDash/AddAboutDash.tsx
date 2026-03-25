@@ -44,7 +44,7 @@ const AddAbout = () => {
 
     images.forEach((img) => formData.append("images", img));
 
-    const res = await fetch("http://ahmed514essamapi.runasp.net/api/About", {
+    const res = await fetch("https://ahmed514essamapi.runasp.net/api/About", {
       method: "POST",
       body: formData,
     });

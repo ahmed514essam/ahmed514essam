@@ -26,7 +26,7 @@ const AllCertificates = () => {
   // جلب البيانات من API
   const fetchCertificates = async () => {
     try {
-      const response = await fetch("http://ahmed514essamapi.runasp.net/api/Certificate");
+      const response = await fetch("https://ahmed514essamapi.runasp.net/api/Certificate");
       const data = await response.json();
       setCertificates(data);
     } catch (error) {
@@ -42,7 +42,7 @@ const AllCertificates = () => {
   const handleDelete = async (id : number) => {
     if (window.confirm("هل أنت متأكد من حذف الشهادة؟")) {
       try {
-        await fetch(`http://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
+        await fetch(`https://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
           method: "DELETE",
         });
         // تحديث القائمة بعد الحذف

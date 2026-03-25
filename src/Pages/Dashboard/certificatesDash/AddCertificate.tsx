@@ -19,7 +19,7 @@ const AddCertificate = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await fetch("http://ahmed514essamapi.runasp.net/api/Certificate", {
+      await fetch("https://ahmed514essamapi.runasp.net/api/Certificate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

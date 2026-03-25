@@ -35,7 +35,7 @@ const Projects = () => {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://ahmed514essamapi.runasp.net/api/Project");
+      const res = await fetch("https://ahmed514essamapi.runasp.net/api/Project");
       if (!res.ok) throw new Error("Failed to fetch projects");
       const projects: DataItem[] = await res.json();
       setData(projects);
@@ -65,7 +65,7 @@ const Projects = () => {
   const handleDelete = async (id: number) => {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
     try {
-      const res = await fetch(`http://ahmed514essamapi.runasp.net/api/Project/${id}`, {
+      const res = await fetch(`https://ahmed514essamapi.runasp.net/api/Project/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete project");

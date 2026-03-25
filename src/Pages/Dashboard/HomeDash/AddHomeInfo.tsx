@@ -42,7 +42,7 @@ const AddHome = () => {
       formData.append("image", image);
     }
 
-    await fetch("http://ahmed514essamapi.runasp.net/api/Home", {
+    await fetch("https://ahmed514essamapi.runasp.net/api/Home", {
       method: "POST",
       body: formData,
     });

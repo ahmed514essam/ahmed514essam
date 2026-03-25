@@ -38,7 +38,7 @@ const EditProject = () => {
     const fetchProject = async () => {
       try {
         const res = await fetch(
-          `http://ahmed514essamapi.runasp.net/api/Project/${id}`
+          `https://ahmed514essamapi.runasp.net/api/Project/${id}`
         );
 
         if (!res.ok) throw new Error("Failed to fetch project");
@@ -88,7 +88,7 @@ const EditProject = () => {
 
     try {
       const res = await fetch(
-        `http://ahmed514essamapi.runasp.net/api/Project/${id}`,
+        `https://ahmed514essamapi.runasp.net/api/Project/${id}`,
         {
           method: "PUT",
           body: formData,

@@ -28,7 +28,7 @@ const EditHome = () => {
 
   // 👇 يجيب البيانات القديمة
   useEffect(() => {
-    fetch("http://ahmed514essamapi.runasp.net/api/Home")
+    fetch("https://ahmed514essamapi.runasp.net/api/Home")
       .then((res) => res.json())
       .then((data) => setForm(data));
   }, []);
@@ -54,7 +54,7 @@ const EditHome = () => {
 
 
 try {
-  const res = await fetch("http://ahmed514essamapi.runasp.net/api/Home", {
+  const res = await fetch("https://ahmed514essamapi.runasp.net/api/Home", {
     method: "PUT",
     body: formData,
   });

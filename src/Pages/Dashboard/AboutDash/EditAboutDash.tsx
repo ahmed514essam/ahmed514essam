@@ -35,7 +35,7 @@ const EditAbout = () => {
 
   // جلب البيانات القديمة
   useEffect(() => {
-    fetch("http://ahmed514essamapi.runasp.net/api/About")
+    fetch("https://ahmed514essamapi.runasp.net/api/About")
       .then((res) => res.json())
       .then((data) => setForm(data));
   }, []);
@@ -55,7 +55,7 @@ const EditAbout = () => {
     images.forEach((img) => formData.append("images", img));
 
     try {
-      const res = await fetch("http://ahmed514essamapi.runasp.net/api/About", {
+      const res = await fetch("https://ahmed514essamapi.runasp.net/api/About", {
         method: "PUT",
         body: formData,
       });

@@ -33,7 +33,7 @@ const EditSkill = () => {
     const fetchProject = async () => {
       try {
         const res = await fetch(
-          `http://ahmed514essamapi.runasp.net/api/Skill/${id}`
+          `https://ahmed514essamapi.runasp.net/api/Skill/${id}`
         );
 
         if (!res.ok) throw new Error("Failed to fetch skill");
@@ -80,7 +80,7 @@ const EditSkill = () => {
 
     try {
       const res = await fetch(
-        `http://ahmed514essamapi.runasp.net/api/Skill/${id}`,
+        `https://ahmed514essamapi.runasp.net/api/Skill/${id}`,
         {
           method: "PUT",
           body: formData,

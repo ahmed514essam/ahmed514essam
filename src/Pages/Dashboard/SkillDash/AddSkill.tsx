@@ -41,7 +41,7 @@ const AddSkill = () => {
 
     try {
       const res = await fetch(
-        "http://ahmed514essamapi.runasp.net/api/Skill",
+        "https://ahmed514essamapi.runasp.net/api/Skill",
         {
           method: "POST",
           body: formData,

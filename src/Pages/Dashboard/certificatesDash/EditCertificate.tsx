@@ -20,7 +20,7 @@ const EditCertificate = () => {
   useEffect(() => {
     const fetchCertificate = async () => {
       try {
-        const response = await fetch(`http://ahmed514essamapi.runasp.net/api/Certificate/${id}`);
+        const response = await fetch(`https://ahmed514essamapi.runasp.net/api/Certificate/${id}`);
         const data = await response.json();
         setName(data.Name);
         setLink(data.CertificatesLink);
@@ -35,7 +35,7 @@ const EditCertificate = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await fetch(`http://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
+      await fetch(`https://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

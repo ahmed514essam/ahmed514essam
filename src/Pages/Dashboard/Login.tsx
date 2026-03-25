@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://ahmed514essamapi.runasp.net/api/Account/login", {
+      const res = await fetch("https://ahmed514essamapi.runasp.net/api/Account/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
