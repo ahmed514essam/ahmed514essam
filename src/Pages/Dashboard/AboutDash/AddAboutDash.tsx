@@ -7,26 +7,27 @@ const AddAbout = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+      console.log(token);
 
     if (!token) {
       navigate("/login");
     }
   }, []);
-  const [form, setForm] = useState({
-    Name: "",
-    BirthDate: "",
-    Phone: "",
-    From:"",
-    Address:"",
-    Email:"",
-    WhoAmI:"",
-    facebook: "",
-    instagram: "",
-    github: "",
-    linkedin: "",
-    whatsapp: "",
-    cv: "",
-  });
+ const [form, setForm] = useState({
+  Name: "",
+  BirthDate: "",
+  Phone: "",
+  From: "",
+  Address: "",
+  Email: "",
+  WhoAmI: "",
+  Education:"",
+  FacebookLink: "",
+  InstagramLink: "",
+  GithubLink: "",
+  LinkedinLink: "",
+  WhatsLink: "",
+});
 
   const [images, setImages] = useState<File[]>([]);
 
@@ -37,35 +38,40 @@ const AddAbout = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const token = localStorage.getItem("token");
     const formData = new FormData();
     Object.entries(form).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
 
-    images.forEach((img) => formData.append("images", img));
-
+images.forEach((img) => formData.append("Images", img));
     const res = await fetch("https://ahmed514essamapi.runasp.net/api/About", {
       method: "POST",
       body: formData,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
 
-    if (!res.ok) return alert("Failed to add home data");
-
+    if (!res.ok)
+      {
+         return alert("Failed to add home data");
+        }
     alert("Added Successfully");
     setForm({
  Name: "",
-    BirthDate: "",
-    Phone: "",
-    From:"",
-    Address:"",
-    Email:"",
-    WhoAmI:"",
-    facebook: "",
-    instagram: "",
-    github: "",
-    linkedin: "",
-    whatsapp: "",
-    cv: "",
+  BirthDate: "",
+  Phone: "",
+  From: "",
+  Address: "",
+  Email: "",
+  WhoAmI: "",
+  Education:"",
+  FacebookLink: "",
+  InstagramLink: "",
+  GithubLink: "",
+  LinkedinLink: "",
+  WhatsLink: "",
     });
     setImages([]);
   };
@@ -83,14 +89,16 @@ const AddAbout = () => {
         <input name="Address" placeholder="Address" onChange={handleChange} />
         <input name="Email" placeholder="Email" onChange={handleChange} />
         <input name="WhoAmI" placeholder="WhoAmI" onChange={handleChange} />
+        <input name="Education" placeholder="Education" onChange={handleChange} />
 
 
-        <input name="facebook" placeholder="Facebook" onChange={handleChange} />
-        <input name="instagram" placeholder="Instagram" onChange={handleChange} />
-        <input name="github" placeholder="GitHub" onChange={handleChange} />
-        <input name="linkedin" placeholder="LinkedIn" onChange={handleChange} />
-        <input name="whatsapp" placeholder="WhatsApp" onChange={handleChange} />
-        <input name="cv" placeholder="CV Link" onChange={handleChange} />
+<input name="FacebookLink" placeholder="Facebook" onChange={handleChange} />
+<input name="InstagramLink" placeholder="Instagram" onChange={handleChange} />
+<input name="GithubLink" placeholder="GitHub" onChange={handleChange} />
+<input name="LinkedinLink" placeholder="LinkedIn" onChange={handleChange} />
+<input name="WhatsLink" placeholder="WhatsApp" onChange={handleChange} />
+
+
 
         <label htmlFor="images">Upload Images</label>
         <input
@@ -101,6 +109,7 @@ const AddAbout = () => {
         />
 
         <button type="submit">Add</button>
+        <button className={styles.backButton} type="button" onClick={() => navigate("/maindashboard")}>Back To Dashboard</button>
       </form>
     </div>
   );

@@ -10,13 +10,17 @@ interface AboutFormData {
     Address?:string,
     Email?:string,
     WhoAmI?:string,
-    facebook?: string,
-    instagram?: string,
-    github?: string,
-    linkedin?: string,
-    whatsapp?: string,
-    cv?: string,
+    Education?:string,
+    FacebookLink?: string,
+    InstagramLink?: string,
+    GithubLink?: string,
+    LinkedinLink?: string,
+    WhatsLink?: string,
 }
+
+
+
+
 
 const EditAbout = () => {
 
@@ -61,6 +65,8 @@ const EditAbout = () => {
       });
 
       if (!res.ok) throw new Error("Update failed");
+
+
       alert("Updated Successfully");
       setImages([]);
     } catch (err) {
@@ -84,14 +90,14 @@ const EditAbout = () => {
         <input name="Address" placeholder="Address" value={form.Address || ""} onChange={handleChange} />
         <input name="Email" placeholder="Email" value={form.Email || ""} onChange={handleChange} />
         <input name="WhoAmI" placeholder="WhoAmI" value={form.WhoAmI} onChange={handleChange} />
+        <input name="Education" placeholder="Education" value={form.Education} onChange={handleChange} />
 
 
-        <input placeholder="Facebook" name="facebook" value={form.facebook || ""} onChange={handleChange} />
-        <input placeholder="Instagram" name="instagram" value={form.instagram || ""} onChange={handleChange} />
-        <input name="github" placeholder="GitHub" value={form.github || ""} onChange={handleChange} />
-        <input name="linkedin" placeholder="Linkedin" value={form.linkedin || ""} onChange={handleChange} />
-        <input name="whatsapp" placeholder="WhatsApp" value={form.whatsapp || ""} onChange={handleChange} />
-        <input name="cv" placeholder="My Resume" value={form.cv || ""} onChange={handleChange} />
+        <input placeholder="Facebook" name="FacebookLink" value={form.FacebookLink || ""} onChange={handleChange} />
+        <input placeholder="Instagram" name="InstagramLink" value={form.InstagramLink || ""} onChange={handleChange} />
+        <input name="GithubLink" placeholder="GitHub" value={form.GithubLink || ""} onChange={handleChange} />
+        <input name="LinkedinLink" placeholder="Linkedin" value={form.LinkedinLink || ""} onChange={handleChange} />
+        <input name="WhatsLink" placeholder="WhatsApp" value={form.WhatsLink || ""} onChange={handleChange} />
 
         <label htmlFor="images">Upload Images</label>
         <input
@@ -102,6 +108,8 @@ const EditAbout = () => {
         />
 
         <button type="submit">Update</button>
+                <button className={styles.backButton} type="button" onClick={() => navigate("/maindashboard")}>Back To Dashboard</button>
+
       </form>
     </div>
   );

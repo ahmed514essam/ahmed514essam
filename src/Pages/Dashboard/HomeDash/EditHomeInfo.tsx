@@ -4,14 +4,17 @@ import { useNavigate } from "react-router-dom";
 
 interface HomeFormData {
   subTitle?: string;
-  description?: string;
-  facebook?: string;
-  instagram?: string;
-  github?: string;
-  linkedin?: string;
-  whatsapp?: string;
-  cv?: string;
+  Summary?: string;
+  FacebookLink?: string;
+  InstagramLink?: string;
+  GithubLink?: string;
+  LinkedinLink?: string;
+  WhatsLink?: string;
+  DownloadResume?: string;
 }
+
+  
+
 
 const EditHome = () => {
    const navigate = useNavigate();
@@ -23,8 +26,11 @@ const EditHome = () => {
       navigate("/login");
     }
   }, []);
+  
+
   const [form, setForm] = useState<HomeFormData>({});
-  const [image, setImage] = useState<File | null>(null);
+  const [image, setImage] = useState<File[]>([]);
+
 
   // 👇 يجيب البيانات القديمة
   useEffect(() => {
@@ -40,15 +46,12 @@ const EditHome = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formData = new FormData();
-
+   const formData = new FormData();
     Object.entries(form).forEach(([key, value]) => {
       formData.append(key, value as string);
     });
 
-    if (image) {
-      formData.append("image", image);
-    }
+    image.forEach((img) => formData.append("image", img));
 
   
 
@@ -61,9 +64,10 @@ try {
 
   if (!res.ok) throw new Error("Update failed");
 
-  alert("Updated Successfully");
-} catch (err) {
-  alert((err as Error).message);
+      alert("Updated Successfully");
+      setImage([]);
+    } catch (err) {
+      alert((err as Error).message);
 }
 
 
@@ -78,19 +82,28 @@ try {
         <h2>Edit Home Data</h2>
 
         <input placeholder="SubTitle" name="subTitle" value={form.subTitle || ""} onChange={handleChange} />
-        <textarea placeholder="Summar" name="description" value={form.description || ""} onChange={handleChange} />
+        <textarea placeholder="Summary" name="Summary" value={form.Summary || ""} onChange={handleChange} />
 
-        <input placeholder="Facebook" name="facebook" value={form.facebook || ""} onChange={handleChange} />
-        <input placeholder="Instagram" name="instagram" value={form.instagram || ""} onChange={handleChange} />
-        <input name="github" placeholder="GitHub" value={form.github || ""} onChange={handleChange} />
-        <input name="linkedin" placeholder="Linkedin" value={form.linkedin || ""} onChange={handleChange} />
-        <input name="whatsapp" placeholder="WhatsApp" value={form.whatsapp || ""} onChange={handleChange} />
-        <input name="cv" placeholder="My Resume" value={form.cv || ""} onChange={handleChange} />
+        <input placeholder="Facebook" name="FacebookLink" value={form.FacebookLink || ""} onChange={handleChange} />
+        <input placeholder="Instagram" name="InstagramLink" value={form.InstagramLink || ""} onChange={handleChange} />
+        <input name="GithubLink" placeholder="GithubLink" value={form.GithubLink || ""} onChange={handleChange} />
+        <input name="LinkedinLink" placeholder="LinkedinLink" value={form.LinkedinLink || ""} onChange={handleChange} />
+        <input name="WhatsLink" placeholder="WhatsLink" value={form.WhatsLink || ""} onChange={handleChange} />
+        <input name="DownloadResume" placeholder="DownloadResume" value={form.DownloadResume || ""} onChange={handleChange} />
 
-<label htmlFor="image">Upload Image</label>
-        <input id="image"  type="file" onChange={(e) => setImage(e.target.files?.[0] || null)} />
+
+     <label htmlFor="image">Upload Images</label>
+        <input
+          id="image"
+          type="file"
+          multiple
+          onChange={(e) => setImage(Array.from(e.target.files || []))}
+        />
+
 
         <button type="submit">Update</button>
+                        <button className={styles.backButton} type="button" onClick={() => navigate("/maindashboard")}>Back To Dashboard</button>
+
       </form>
     </div>
   );
