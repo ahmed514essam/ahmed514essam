@@ -3,11 +3,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import styles from "./EditProject.module.css";
 
 interface ProjectData {
-  name: string;
-  subTitle?: string;
-  description: string;
-  demo: string;
-  repo: string;
+  Id:number;
+  Name: string;
+  SubTitle?: string;
+  Description: string;
+  DemoLink: string;
+  RepoLink: string;
 }
 
 const EditProject = () => {
@@ -20,17 +21,19 @@ const EditProject = () => {
       navigate("/login");
     }
   }, []);
+
   const { id } = useParams(); // 👈 نجيب id من URL
 
   const [form, setForm] = useState<ProjectData>({
-    name: "",
-    subTitle: "",
-    description: "",
-    demo: "",
-    repo: "",
+    Id: 0,
+    Name: "",
+    SubTitle: "",
+    Description: "",
+    DemoLink: "",
+    RepoLink: "",
   });
 
-  const [image, setImage] = useState<File | null>(null);
+  const [image, setImage] = useState<File[]>([]);
   const [loading, setLoading] = useState(true);
 
   // ✅ جلب بيانات المشروع
@@ -46,11 +49,12 @@ const EditProject = () => {
         const data = await res.json();
 
         setForm({
-          name: data.name || "",
-          subTitle: data.subTitle || "",
-          description: data.description || "",
-          demo: data.demo || "",
-          repo: data.repo || "",
+          Id: data.id || 0,
+          Name: data.name || "",
+          SubTitle: data.subTitle || "",
+          Description: data.description || "",
+          DemoLink: data.demo || "",
+          RepoLink: data.repo || "",
         });
       } catch (err : unknown) {
          if (err instanceof Error) {
@@ -82,8 +86,9 @@ const EditProject = () => {
       formData.append(key, value as string);
     });
 
-    if (image) {
-      formData.append("image", image);
+    if (image && image.length > 0) {
+      image.forEach((file) => {
+formData.append("NewImages", file);      });
     }
 
     try {
@@ -99,7 +104,7 @@ const EditProject = () => {
 
       alert("Project updated successfully");
 
-      navigate("/projects"); // 👈 رجوع لصفحة المشاريع
+      navigate("/showProjects"); // 👈 رجوع لصفحة المشاريع
     } catch (err: unknown) {
       if (err instanceof Error) alert(err.message);
       else alert("Unexpected error occurred");
@@ -114,48 +119,55 @@ const EditProject = () => {
         <h2>Edit Project</h2>
 
         <input
-          name="name"
+          name="Name"
           placeholder="Project Name"
-          value={form.name}
+          value={form.Name}
           onChange={handleChange}
         />
 
         <input
-          name="subTitle"
+          name="SubTitle"
           placeholder="Sub Title"
-          value={form.subTitle}
+          value={form.SubTitle}
           onChange={handleChange}
         />
 
         <textarea
-          name="description"
+          name="Description"
           placeholder="Description"
-          value={form.description}
+          value={form.Description}
           onChange={handleChange}
         />
 
         <input
-          name="demo"
+          name="DemoLink"
           placeholder="Demo Link"
-          value={form.demo}
+          value={form.DemoLink}
           onChange={handleChange}
         />
 
         <input
-          name="repo"
+          name="RepoLink"
           placeholder="GitHub Repo"
-          value={form.repo}
+          value={form.RepoLink}
           onChange={handleChange}
         />
 
-        <label htmlFor="image">Change Image</label>
+       
+
+
+  <label htmlFor="image">Upload Images</label>
         <input
-          type="file"
           id="image"
-          onChange={(e) => setImage(e.target.files?.[0] || null)}
+          type="file"
+          multiple
+          onChange={(e) => setImage(Array.from(e.target.files || []))}
         />
+
 
         <button type="submit">Update Project</button>
+                                        <button className={styles.backButton} type="button" onClick={() => navigate("/maindashboard")}>Back To Dashboard</button>
+
       </form>
     </div>
   );

@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import styles from "./EditSkill.module.css";
+import styles from "./EditProject.module.css";
 
-interface SkillData {
-  name: string;
-  type?: string;
+interface ProjectData {
+  Id:number;
+  Name: string;
+  Type?: string;
   
 }
 
-const EditSkill = () => {
+const EditProject = () => {
    const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,14 +19,17 @@ const EditSkill = () => {
       navigate("/login");
     }
   }, []);
+
   const { id } = useParams(); // 👈 نجيب id من URL
 
-  const [form, setForm] = useState<SkillData>({
-    name: "",
-    type: "",   
+  const [form, setForm] = useState<ProjectData>({
+    Id: 0,
+    Name: "",
+    Type: "",
+    
   });
 
-  const [image, setImage] = useState<File | null>(null);
+  const [image, setImage] = useState<File[]>([]);
   const [loading, setLoading] = useState(true);
 
   // ✅ جلب بيانات المشروع
@@ -36,13 +40,15 @@ const EditSkill = () => {
           `https://ahmed514essamapi.runasp.net/api/Skill/${id}`
         );
 
-        if (!res.ok) throw new Error("Failed to fetch skill");
+        if (!res.ok) throw new Error("Failed to fetch project");
 
         const data = await res.json();
 
         setForm({
-          name: data.name || "",
-          type: data.type || "",
+          Id: data.id || 0,
+          Name: data.name || "",
+          Type: data.type || "",
+      
         });
       } catch (err : unknown) {
          if (err instanceof Error) {
@@ -74,8 +80,9 @@ const EditSkill = () => {
       formData.append(key, value as string);
     });
 
-    if (image) {
-      formData.append("image", image);
+    if (image && image.length > 0) {
+      image.forEach((file) => {
+formData.append("NewImages", file);      });
     }
 
     try {
@@ -91,7 +98,7 @@ const EditSkill = () => {
 
       alert("Skill updated successfully");
 
-      navigate("/skills"); // 👈 رجوع لصفحة المهارات
+      navigate("/ShowSkills"); // 👈 رجوع لصفحة المهارات
     } catch (err: unknown) {
       if (err instanceof Error) alert(err.message);
       else alert("Unexpected error occurred");
@@ -103,35 +110,42 @@ const EditSkill = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <h2>Edit Skill</h2>
+        <h2>Edit Project</h2>
 
         <input
-          name="name"
-          placeholder="Skill Name"
-          value={form.name}
+          name="Name"
+          placeholder="Project Name"
+          value={form.Name}
           onChange={handleChange}
         />
 
         <input
-          name="type"
-          placeholder="Skill Type"
-          value={form.type}
+          name="SubTitle"
+          placeholder="Sub Title"
+          value={form.Type}
           onChange={handleChange}
         />
 
-  
+      
 
-        <label htmlFor="image">Change Image</label>
+       
+
+
+  <label htmlFor="image">Upload Images</label>
         <input
-          type="file"
           id="image"
-          onChange={(e) => setImage(e.target.files?.[0] || null)}
+          type="file"
+          multiple
+          onChange={(e) => setImage(Array.from(e.target.files || []))}
         />
 
-        <button type="submit">Update Project</button>
+
+        <button type="submit">Update Skill</button>
+                                        <button className={styles.backButton} type="button" onClick={() => navigate("/maindashboard")}>Back To Dashboard</button>
+
       </form>
     </div>
   );
 };
 
-export default EditSkill;
+export default EditProject;

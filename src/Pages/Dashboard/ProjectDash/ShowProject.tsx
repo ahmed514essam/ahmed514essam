@@ -1,6 +1,6 @@
 import styles from "./Project.module.css";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
@@ -42,8 +42,8 @@ const Projects = () => {
 
         const result = await res.json();
         setData(result);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: Error | unknown) {
+        setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
         setLoading(false);
       }
@@ -140,13 +140,14 @@ const Projects = () => {
 
                 {/* ✏ Edit */}
                 <button
+                  title="Edit"
                   onClick={() => navigate(`/dashboard/edit-project/${item.Id}`)}
                 >
                   <FontAwesomeIcon icon={faEdit} />
                 </button>
 
                 {/* 🗑 Delete */}
-                <button onClick={() => handleDelete(item.Id)}>
+                <button title="Delete" onClick={() => handleDelete(item.Id)}>
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
               </div>
