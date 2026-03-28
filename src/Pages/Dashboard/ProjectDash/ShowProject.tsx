@@ -1,4 +1,4 @@
-import styles from "./Project.module.css";
+import styles from "./ShowProject.module.css";
 import { useEffect, useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

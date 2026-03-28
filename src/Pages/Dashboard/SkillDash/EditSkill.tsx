@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import styles from "./EditProject.module.css";
+import styles from "./EditSkill.module.css";
 
 interface ProjectData {
   Id:number;
@@ -9,7 +9,7 @@ interface ProjectData {
   
 }
 
-const EditProject = () => {
+const EditSkill = () => {
    const navigate = useNavigate();
 
   useEffect(() => {
@@ -148,4 +148,4 @@ formData.append("NewImages", file);      });
   );
 };
 
-export default EditProject;
+export default EditSkill;

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./AddProject.module.css";
+import styles from "./AddSkill.module.css";
 
-const AddProject = () => {
+const AddSkill = () => {
    const navigate = useNavigate();
 
  useEffect(() => {
@@ -93,4 +93,4 @@ image.forEach((img) => formData.append("Image", img));
   );
 };
 
-export default AddProject;
+export default AddSkill;
