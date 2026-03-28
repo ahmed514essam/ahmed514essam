@@ -37,6 +37,7 @@ const AllCertificates = () => {
   useEffect(() => {
     fetchCertificates();
   }, []);
+    const token = localStorage.getItem("token");
 
   // دالة الحذف
   const handleDelete = async (id : number) => {
@@ -44,6 +45,9 @@ const AllCertificates = () => {
       try {
         await fetch(`https://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
           method: "DELETE",
+ headers: {
+            Authorization: `Bearer ${token}`,
+          },
         });
         // تحديث القائمة بعد الحذف
 setCertificates(certificates.filter(cert => cert['Id'] !== id));
@@ -55,27 +59,27 @@ setCertificates(certificates.filter(cert => cert['Id'] !== id));
 
   return (
     <div className={styles.container}>
-      <h1>جميع الشهادات</h1>
+      <h1> All Certificates</h1>
       <div className={styles.grid}>
         {certificates.map(cert => (
           <div key={cert.Id} className={styles.card}>
             <img src={cert.Images} alt={cert.Name} className={styles.image} />
             <h2>{cert.Name}</h2>
             <a href={cert.CertificatesLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              عرض الشهادة
+              View Certificate
             </a>
             <div className={styles.actions}>
               <button
                 className={`${styles.btn} ${styles.edit}`}
                 onClick={() => navigate(`/edit-certificate/${cert.Id}`)}
               >
-                <FontAwesomeIcon icon={faEdit} /> تعديل
+                <FontAwesomeIcon icon={faEdit} /> Edit
               </button>
               <button
                 className={`${styles.btn} ${styles.delete}`}
                 onClick={() => handleDelete(cert.Id)}
               >
-                <FontAwesomeIcon icon={faTrash} /> حذف
+                <FontAwesomeIcon icon={faTrash} /> Delete
               </button>
             </div>
           </div>

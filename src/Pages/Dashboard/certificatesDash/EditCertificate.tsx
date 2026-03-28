@@ -31,13 +31,18 @@ const EditCertificate = () => {
     };
     fetchCertificate();
   }, [id]);
+    const token = localStorage.getItem("token");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await fetch(`https://ahmed514essamapi.runasp.net/api/Certificate/${id}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" ,
+           
+            Authorization: `Bearer ${token}`,
+          
+        },
         body: JSON.stringify({
           Id: id,
           Name: name,

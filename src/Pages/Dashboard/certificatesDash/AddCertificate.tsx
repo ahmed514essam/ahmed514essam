@@ -15,13 +15,17 @@ const AddCertificate = () => {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [image, setImage] = useState("");
+    const token = localStorage.getItem("token");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await fetch("https://ahmed514essamapi.runasp.net/api/Certificate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" ,
+            Authorization: `Bearer ${token}`,
+          
+        },
         body: JSON.stringify({
           Name: name,
           CertificatesLink: link,
