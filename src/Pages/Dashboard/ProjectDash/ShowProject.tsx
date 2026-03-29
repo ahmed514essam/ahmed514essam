@@ -35,8 +35,14 @@ const Projects = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "https://ahmed514essamapi.runasp.net/api/Project"
-        );
+          "https://ahmed514essamapi.runasp.net/api/Project" ,{
+            headers: {
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
+      }});
+
+
+
+
 
         if (!res.ok) throw new Error("Failed to fetch");
 

@@ -22,6 +22,7 @@ import EditCertificate from "./Pages/Dashboard/certificatesDash/EditCertificate"
 import AllCertificates from "./Pages/Dashboard/certificatesDash/AllCertificates";
 import AddHome from "./Pages/Dashboard/HomeDash/AddHomeInfo";
 import EditHome from "./Pages/Dashboard/HomeDash/EditHomeInfo";
+import ProtectedRoute from "./Pages/Components/ProtectedRoute";
 
 
 
@@ -39,26 +40,43 @@ function App() {
  <Route path="/myprojects" element={<Projects/>} />
  <Route path="contactme" element={<Contact/>} />
  
-<Route path="/maindashboard" element={<MainDashboard/>}/>
+<Route path="/maindashboard" element={
+  <ProtectedRoute>
+  <MainDashboard/>
+  </ProtectedRoute>
+  } />
   <Route path="/login" element={<Login />} />
 
-<Route path="/showProjects" element={<ShowProject />} />
-<Route path="/addProject" element={<AddProject />} />
-<Route path="/edit-project/:id" element={<EditProject />} />
+<Route path="/showProjects" element={  <ProtectedRoute>
+<ShowProject /> </ProtectedRoute>} />
+<Route path="/addProject" element={  <ProtectedRoute>
+ <AddProject /> </ProtectedRoute>} />
+<Route path="/edit-project/:id" element={  <ProtectedRoute>
+ <EditProject /> </ProtectedRoute>} />
 
-<Route path="/showSkills" element={<ShowSkills />} />
-<Route path="/edit-skill/:id" element={<EditSkill />} />
-<Route path="/add-skill" element={<AddSkill />} />
+<Route path="/showSkills" element={  <ProtectedRoute>
+<ShowSkills /> </ProtectedRoute>} />
+<Route path="/edit-skill/:id" element={   <ProtectedRoute>
+<EditSkill /> </ProtectedRoute>} />
+<Route path="/add-skill" element={  <ProtectedRoute>
+<AddSkill /> </ProtectedRoute>} />
 
-<Route path="/addabout" element={<AddAbout />} />
-<Route path="editabout" element={<EditAbout />} />
+<Route path="/addabout" element={  <ProtectedRoute>
+<AddAbout /> </ProtectedRoute>} />
+<Route path="editabout" element={  <ProtectedRoute>
+<EditAbout /> </ProtectedRoute>} />
 
-<Route path="/addcertificate" element={<AddCertificate />} />
-<Route path="/edit-certificate/:id" element={<EditCertificate />} />
-<Route path="/all-certificates" element={<AllCertificates />} />
+<Route path="/addcertificate" element={  <ProtectedRoute>
+<AddCertificate /> </ProtectedRoute>} />
+<Route path="/edit-certificate/:id" element={  <ProtectedRoute>
+<EditCertificate /></ProtectedRoute>} />
+<Route path="/all-certificates" element={  <ProtectedRoute>
+<AllCertificates /></ProtectedRoute>} />
 
-<Route path="addhome" element={<AddHome/>} />
-<Route path="edithome" element={<EditHome/>} />
+<Route path="addhome" element={  <ProtectedRoute>
+<AddHome/> </ProtectedRoute>} />
+<Route path="edithome" element={  <ProtectedRoute>
+<EditHome/> </ProtectedRoute>} />
 
         </Route>
       </Routes>

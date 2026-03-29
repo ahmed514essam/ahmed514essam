@@ -32,7 +32,12 @@ const ShowSkill = () => {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "https://ahmed514essamapi.runasp.net/api/Skill"
+          "https://ahmed514essamapi.runasp.net/api/Skill",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
         );
 
         if (!res.ok) throw new Error("Failed to fetch");

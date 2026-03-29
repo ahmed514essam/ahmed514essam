@@ -32,7 +32,7 @@ const AddProject = () => {
     e.preventDefault();
 
 
- const token = localStorage.getItem("token");
+//  const token = localStorage.getItem("token");
     const formData = new FormData();
     Object.entries(form).forEach(([key, value]) => {
       formData.append(key, value as string);
@@ -46,9 +46,12 @@ image.forEach((img) => formData.append("Image", img));
       method: "POST",
       body: formData,
       headers: {
-        Authorization: `Bearer ${token}`,
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
+
+
+
 
     alert("Added Successfully");
   };

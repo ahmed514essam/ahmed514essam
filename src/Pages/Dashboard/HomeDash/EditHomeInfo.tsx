@@ -60,6 +60,9 @@ try {
   const res = await fetch("https://ahmed514essamapi.runasp.net/api/Home", {
     method: "PUT",
     body: formData,
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
   });
 
   if (!res.ok) throw new Error("Update failed");

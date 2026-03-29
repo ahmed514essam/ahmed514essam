@@ -41,7 +41,11 @@ const EditProject = () => {
     const fetchProject = async () => {
       try {
         const res = await fetch(
-          `https://ahmed514essamapi.runasp.net/api/Project/${id}`
+          `https://ahmed514essamapi.runasp.net/api/Project/${id}` , {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
         );
 
         if (!res.ok) throw new Error("Failed to fetch project");
