@@ -10,7 +10,13 @@ const ProgrammingSkills = () => {
         { name: "SQL", img: "/skills/sql.png" },
         {name:"OOP" , img: "/skills/OOP.png"},
         {name:"Proplem Solving" , img:"/skills/ProplemSolving.png"},
+        {name:"Data Structure" , img: "/skills/DS.png"},
+                {name:"Data Structure" , img: "/skills/DS.png"},
+        {name:"Data Structure" , img: "/skills/DS.png"},
+        {name:"Data Structure" , img: "/skills/DS.png"},
+        {name:"Data Structure" , img: "/skills/DS.png"},
         {name:"Data Structure" , img: "/skills/DS.png"}
+
       ];
     return (
         <>
