@@ -2,16 +2,15 @@ import style from "./FrontendSkills.module.css" ;
 
 const FrontendSkills = () => {
     const skills = [
-        { name: "HTML5", img: "skills/html.png" },
-        { name: "CSS3", img: "skills/css.png" },
-        { name: "JavaScript", img: "skills/js.png" },
-        { name: "TypeScript", img: "skills/typescript.png" },
-        { name: "Bootstrap", img: "skills/bootstrap.png" },
-        { name: "React JS", img: "skills/react.png" },
-        { name: "Redux", img: "skills/redux.png" },
-        { name: "Vite", img: "skills/vite.png" },
-        { name: "Next JS", img: "skills/next.png" },
-        { name: "Web Design", img: "skills/design.png" },
+       { name: "HTML5", img: "/skills/html.png" },
+        { name: "CSS3", img: "/skills/css.png" },
+        { name: "JavaScript", img: "/skills/js.png" },
+        { name: "TypeScript", img: "/skills/typescript.png" },
+        { name: "Bootstrap", img: "/skills/bootstrap.png" },
+        { name: "React JS", img: "/skills/react.png" },
+        { name: "Vite", img: "/skills/vite.png" },
+        { name: "Figma", img: "/skills/figma.png" },
+        { name: "Web Design", img: "/skills/design.png" }
       ];
     return (
         <>

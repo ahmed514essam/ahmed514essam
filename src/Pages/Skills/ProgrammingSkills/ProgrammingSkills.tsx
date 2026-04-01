@@ -3,19 +3,13 @@ import style from "./ProgrammingSkills.module.css" ;
 const ProgrammingSkills = () => {
     const skills = [
        
-        { name: "npm", img: "/skills/npm.png" },
-        { name: "Figma", img: "/skills/figma.png" },
+        {name:"NPM" , img :"/skills/npm.png"},
         { name: "C++", img: "/skills/C++.png" },
-        { name: "C#", img: "/skills/SharpC.png" },
-        { name: "SQL", img: "/skills/sql.png" },
-        {name:"OOP" , img: "/skills/OOP.png"},
+        { name: "Redux", img: "/skills/redux.png" },
         {name:"Proplem Solving" , img:"/skills/ProplemSolving.png"},
-        {name:"Data Structure" , img: "/skills/DS.png"},
-                {name:"Data Structure" , img: "/skills/DS.png"},
-        {name:"Data Structure" , img: "/skills/DS.png"},
-        {name:"Data Structure" , img: "/skills/DS.png"},
-        {name:"Data Structure" , img: "/skills/DS.png"},
-        {name:"Data Structure" , img: "/skills/DS.png"}
+         {name:"OOP" , img: "/skills/OOP.png"},
+        {name:"Data Structure", img :"/public/skills/DS.png"},
+        {name:"Algorithm", img :"/public/skills/aloogrthim.png"}
 
       ];
     return (

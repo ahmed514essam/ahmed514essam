@@ -1,53 +1,60 @@
-.skillSection {
-margin-top: 80px;
-
-width: 100%;
-min-height: 100vh;
-height: 100%;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-background-color: hsla(207, 62%, 9%, 0.997) ;
-
-}
-.skillSection h1 {
-    font-weight: 700;
-    font-size: 3em;
-    width: 100%;
-    text-align: center;
-    color: rgb(70, 177, 196); 
-padding-top: 50px;
-padding-bottom: 50px;
-}
 .btnCategories {
-    width: 100%;
-    padding-left: 15px;
-    gap: 20px;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* يخليهم ينزلوا تحت في الموبايل */
+  gap: 15px;
+  padding: 0 20px;
 }
+.skillSection{
+    margin-top: 70px;
+    max-height: 100%;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: hsla(207, 62%, 9%, 0.997) ;
+}
+.skillSection h1 { font-weight: 700; font-size: 3em; width: 100%; text-align: center; color: rgb(70, 177, 196); padding-top: 50px; padding-bottom: 50px; }
 .btnCategories button {
-    padding: 10px 12px;
-    border: 0;
-    font-weight: 600; 
-    margin-right: 10px;
-    border-radius: 15px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 1.2em;
-font-weight: 700;
+  padding: 10px 18px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: transparent;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-@media (max-width:1163px) {
-    .skillSection {
-        padding-bottom: 50px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-            }
-    
-@media (max-width:519px) {
-    .btnCategories button {
-        margin-bottom: 0px;
-    }
+
+/* hover effect */
+.btnCategories button:hover {
+  color: rgb(70, 177, 196);
+  border-color: rgb(70, 177, 196);
+  transform: translateY(-2px);
 }
-@media (max-width:479px) {
-    .btnCategories button {
-        margin-bottom: 0px;
-    }
+
+/* active button */
+.active {
+  background: rgb(70, 177, 196);
+  color: #0b1c26;
+  border-color: rgb(70, 177, 196);
+  box-shadow: 0 4px 15px rgba(70, 177, 196, 0.4);
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .btnCategories button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btnCategories {
+    gap: 10px;
+  }
+
+  .btnCategories button {
+    width: 100%; /* كل زرار ياخد سطر */
+    text-align: center;
+  }
 }
