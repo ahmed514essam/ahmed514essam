@@ -1,299 +1,128 @@
 .bageContact {
-    min-height: auto;
-    height: 100vh;
-    width: 100%;
-    background-color: hsla(207, 62%, 9%, 0.997) ;
-margin-top: 70px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-padding-bottom: 50px;
-overflow: hidden;
-margin-bottom:0px ;
-
+  min-height: 100vh;
+  background-color: hsla(207, 62%, 9%, 0.997);
+  padding: 40px 0;
+  margin-top: 70px;
 }
-.continueContct {
-    height: 100%;
-}
-.anotherWay {padding-bottom: 20px;}
-@media (max-width:1200px) {
-  
-    .bageContact {
-        height: 80vh;
-        width: 100%;
-        background-color: hsla(207, 62%, 9%, 0.997) ;
-    margin-top: 70px;
-    margin-bottom:0px ;
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    }}
 .bageContact h1 {
-    width: 100%;
-    text-align: center;
-    color: rgb(70, 177, 196);
-    font-weight: 700;
-    padding-top: 50px;
+  text-align: center;
+  color: rgb(70, 177, 196);
+  margin-bottom: 30px;
 }
+
 .continueContct {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
-.nameFraction , .emailFraction , .cityFraction , .messageFraction , .sendingButton {
-    width: 100%;
-padding-bottom: 20px;
-padding-top: 20px;
+
+/* inputs */
+.continueContct input,
+.continueContct select,
+.continueContct textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1rem;
+  outline: none;
 }
-.nameFraction input , .emailFraction input , .cityFraction select , .messageFraction textarea   {
-    width: 100%;
-border-radius: 12px;
-outline: none;
-border: 0;
-padding-left: 30px;
-font-size: 1.2em;
-height: 50px;
-font-weight: 500;
-}
+
+/* buttons */
 .sendingButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
 .sendingButton button {
-    width: 30%;
-    padding: 8px 12px;
-    font-weight: 600;
-    font-size: 1.4em;
-    color: white;
-    border-radius: 12px;
-border: 0;
+  min-width: 140px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
 }
+
+/* delete */
 .deleteBtn {
-background-color: red;
-font-family: sans-serif;
+  background: transparent;
+  color: #ff4d4d;
+  border: 2px solid #ff4d4d;
 }
+
+.deleteBtn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* send */
 .sendBtn {
-    background-color: rgb(70, 177, 196);
-    font-family: sans-serif;
+  background: linear-gradient(135deg, rgb(70, 177, 196), rgb(40, 140, 160));
+  color: #0b1c26;
 }
+
+.sendBtn:hover {
+  transform: scale(1.05);
+}
+
+/* links */
 .anotherWay {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
-.googleAc {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
+
+.googleAc,
 .whatsAcc {
-    padding-top: 15px;
-    text-decoration: none;
-font-size: 1.3em;
-color: white;
-transition: .5s ease;
+  display: block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
 }
+
 .whatsAcc:hover {
-    color: green;
-}
-.arroIcon {
-    color: white;
-    font-weight: 600;
-    padding-left: 10px;
-}
-@media (max-width:900px) {
-  
-    .bageContact {
-        min-height: auto;
-        height: 100%;
-        width: 100%;
-        background-color: hsla(207, 62%, 9%, 0.997) ;
-    margin-top: 70px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom:0px ;
-padding: 20px 0 100px 0;
-    }
-    .continueContct {
-        width: 80%;
-     
-    }
+  color: green;
 }
 
-
-@media (min-width:450px) and (max-width:855px) {
-    .bageContact {
-        min-height: auto;
-        height: 100vh;
-        padding: 20px 0 100px 0;
-    }
+/* alerts */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
-
-@media (max-width:531px) {
-    .bageContact {
-        min-height: auto;
-    height: 100%;
-    padding: 20px 0 100px 0;
-    }
-    .continueContct {
-        width: 95%;
-     
-    }
-    .sendingButton {
-        display: flex;
-        flex-direction: column;
-margin: auto;
-gap: 20px;
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-    .sendingButton button {
-        width: 80%;
-    margin: auto;
-    }
-}
-select option {
-    color: rgb(20, 76, 86);
-    font-family: sans-serif;
-    font-weight: 700;
-    border-bottom:2px solid black ;
-cursor: pointer;
+/* responsive */
+@media (max-width: 768px) {
+  .continueContct {
+    width: 90%;
+  }
 }
 
+@media (max-width: 600px) {
+  .sendingButton {
+    flex-direction: column;
+  }
 
-
-@media (max-width:421px) {
-.bageContact {
-    min-height: auto;
-height: 100%;
-padding: 20px 0 100px 0;
-}
-  
-    .nameFraction , .emailFraction , .cityFraction , .messageFraction , .sendingButton {
-        width: 100%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    }
-    .nameFraction input , .emailFraction input , .cityFraction select , .messageFraction textarea   {
-        width: 100%;
-    border-radius: 12px;
-    outline: none;
-    border: 0;
-    padding-left: 30px;
-    font-size: 1.2em;
-    height: 50px;
-    font-weight: 500;
-    }
-  
-    .sendingButton button {
-        width: 40%;
-        padding: 8px 12px;
-        font-weight: 600;
-        font-size: 1.3em;
-    }
-   
-    .anotherWay {
-        width: 99%;
-        margin: auto;
-        padding-bottom: 20px;
-  
-    }
-    .googleAc {
-        font-size: 1.2em;
-    }
-    .whatsAcc {
-    font-size: 1.2em;
-    }
- 
-}
-
-.emailOverAlert , .nameOverAlert , .bothOverAlert {
+  .sendingButton button {
     width: 100%;
-    height: 100vh;
-    bottom: 0;
-    top: 0;
-    right:0 ;
-    left: 0;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-display: flex;
-justify-content: center;
-align-items: center;
+  }
 }
-.nameCardAlert , .bothCardAlert , .emailCardAlert {
-width: 300px;
-height: 180px;
-border-radius: 12px;
-padding: 10px;
-background-color: rgb(216, 216, 216);
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-.closediv {
-    width: 100%;
-    font-weight: 700;
-    color: black;
-    font-family: sans-serif;
-    direction: rtl;
-    border-bottom:2px solid rgb(162, 162, 162);
-    font-size: 1.2em;
-}
-.nameBodyOfAlert {
-width: 100%;
-direction: ltr;
-font-weight: 700;
-color: black;
-
-}
-.nameBtnAlert {
-    width: 100%;
-    bottom: 0;
-}
-.nameBtnAlert button {
-    border-radius: 12px;
-    color: white;
-    background-color: rgb(20, 76, 86);
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 10px 15px;
-    border: 0;
-    
-}
-.emailBtnAlert button {
-    border-radius: 12px;
-    color: white;
-    background-color: rgb(20, 76, 86);
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 10px 15px;
-    border: 0;
-    
-}
-.bothBtnAlert button {
-    border-radius: 12px;
-    color: white;
-    background-color: rgb(20, 76, 86);
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 10px 15px;
-    border: 0;
-    
-}
-@media (max-width:1163px) {
-    .bageContact {
-        margin-bottom: 00px;
-    }
-            }
-    
