@@ -1,0 +1,64 @@
+.oneskill {
+    width: 230px;
+    height: 130px;
+    margin-bottom: 15px;
+background-color: rgb(12, 43, 48);  
+  border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: .5s ease;
+}
+.imgSpan img {
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+
+}
+.imgSpan {
+    width: 60px;
+}
+.nameofSkill {
+    color: aliceblue;
+    font-size: 1.7em;
+    width: 50%;
+}
+.skillContent {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.oneskill:hover {
+    background-color: rgb(38, 103, 114);
+
+}
+@media (max-width:1183px) {
+    .oneskill {
+        width: 270px;
+    }
+}
+@media (max-width:984px) {
+    .oneskill {
+        width: 230px;
+    }
+}
+@media (max-width:849px) {
+    .oneskill {
+        width: 280px;
+    }
+}
+@media (max-width:674px) {
+    .oneskill {
+        width: 230px;
+    }
+}
+@media (max-width:556px) {
+    .oneskill {
+        width: 290px;
+    }
+}

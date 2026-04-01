@@ -1,72 +1,61 @@
-.oneskill {
-    width: 230px;
-    height: 130px;
-    margin-bottom: 15px;
-    background-color: rgb(12, 43, 48);  
-    border-radius: 13px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    transition: .5s ease;
+.btnCategories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* يخليهم ينزلوا تحت في الموبايل */
+  gap: 15px;
+  padding: 0 20px;
 }
-
-.imgSpan img {
-    object-fit: cover;
-    width: 100%;
+.skillSection{
+    margin-top: 70px;
+    padding-bottom: 250px;
+    max-height: 100%;
     height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: hsla(207, 62%, 9%, 0.997) ;
+}
+.skillSection h1 { font-weight: 700; font-size: 3em; width: 100%; text-align: center; color: rgb(70, 177, 196); padding-top: 50px; padding-bottom: 50px; }
+.btnCategories button {
+  padding: 10px 18px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: transparent;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.imgSpan {
-    width: 60px;
+/* hover effect */
+.btnCategories button:hover {
+  color: rgb(70, 177, 196);
+  border-color: rgb(70, 177, 196);
+  transform: translateY(-2px);
 }
 
-.nameofSkill {
-    color: aliceblue;
-    font-size: 1.7em;
-    width: 50%;
+/* active button */
+.active {
+  background: rgb(70, 177, 196);
+  color: #0b1c26;
+  border-color: rgb(70, 177, 196);
+  box-shadow: 0 4px 15px rgba(70, 177, 196, 0.4);
 }
 
-.skillContent {
-    width: 90%;
-    margin: auto;
-    padding-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .btnCategories button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
 }
 
-.oneskill:hover {
-    background-color: rgb(38, 103, 114);
-}
+@media (max-width: 480px) {
+  .btnCategories {
+    gap: 10px;
+  }
 
-@media (max-width:1183px) {
-    .oneskill {
-        width: 270px;
-    }
-}
-
-@media (max-width:984px) {
-    .oneskill {
-        width: 230px;
-    }
-}
-
-@media (max-width:849px) {
-    .oneskill {
-        width: 280px;
-    }
-}
-
-@media (max-width:674px) {
-    .oneskill {
-        width: 230px;
-    }
-}
-
-@media (max-width:556px) {
-    .oneskill {
-        width: 290px;
-    }
+  .btnCategories button {
+    width: 100%; /* كل زرار ياخد سطر */
+    text-align: center;
+  }
 }

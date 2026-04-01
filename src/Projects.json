@@ -1,4 +1,20 @@
 [
+      {
+           "name" : "Essam Fashion",
+        "description" : "Essam Clothes is an online store project specializing in selling men's clothing, built using ASP.NET MVC with SQL Server, and aims to provide a simple, fast, and secure shopping experience for users, with a complete management control panel., it developed using ASP.NET Core MVC and Entity Framework and JWT and Cloudinary " ,
+        "demo" : "https://essamfashion.runasp.net/" ,
+        "repo" : "https://github.com/ahmed514essam/essamClothes.git" ,
+        "image" : "projectsImages/eclot.png",
+        "about" : "E-Commerce about clothes with complete management control panel"
+    },
+    {
+           "name" : "Student Management System",
+        "description" : "This project is a Student Management System built with ASP.NET Core MVC and Entity Framework.It provides a complete academic portal with CRUD operations for students, departments, and courses, it developed using ASP.NET Core MVC and Entity Framework and JWT and Cloudinary " ,
+        "demo" : "http://studentmangementsystem.runasp.net/" ,
+        "repo" : "https://github.com/ahmed514essam/studentMangementSystem.git" ,
+        "image" : "projectsImages/studentmangement.png",
+        "about" : " CRUD operations for students, departments, and courses"
+    },
     {
         "name" : "Muslim",
         "description" : "Muslim Quran is a wonderful platform that allows you to read the entire Quran and recite various supplications, including morning and evening prayers, as well as post-prayer supplications. It also features a radio with a selection of sheikhs and reciters." ,

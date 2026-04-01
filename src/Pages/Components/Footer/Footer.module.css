@@ -1,0 +1,27 @@
+.footEnd {
+    width: 100%;
+    min-height: max-content;
+    height: 90px;
+    background-color: rgba(11, 22, 31, 0.997) ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 999;
+    position: relative;
+}
+
+
+
+.copyRightP {
+    font-weight: 600;
+    color: rgb(194, 194, 194);
+}
+@media (max-width:1163px) {
+    .footEnd {
+        position: relative;
+    }
+}
