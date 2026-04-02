@@ -36,10 +36,10 @@ import { faFacebookF, faLinkedinIn, faGithub, faWhatsapp } from "@fortawesome/fr
       />
 </h1>
 
-<h2 className={style.jopMessage}>And I'm a <span className={style.spanJopTitle}>Frontend Developer</span></h2>
+<h2 className={style.jopMessage}>And I'm a <span className={style.spanJopTitle}>Full Stack Developer</span></h2>
 
 <p>
-A software developer specializing in front-end development with React JS and Next JS, utilizing JavaScript. I am dedicated to continually enhancing my skills and experience and am excited to collaborate with you to deliver well-organized and high-quality software solutions.
+Full Stack Web Developer with a strong focus on Backend Development using ASP.NET. Computer Science graduate (Very Good) with a distinction-level graduation project in Machine Learning (plant disease detection). Experienced in building scalable APIs, secure authentication with JWT, and working with SQL Server using Entity Framework. Skilled in Clean Code, Design Patterns, and React for frontend integration. Passionate about building efficient, maintainable systems
 </p>
 
 <div className={style.SocialIcons}>
@@ -88,7 +88,7 @@ Between Two Halfs
 
 
 
-<img src={PersonalImage} alt="Ahmed Essam El Sayed" />
+<img alt="Me" src={PersonalImage} />
 
 
 

@@ -1,7 +1,7 @@
 import style from "./about.module.css";
 import CursorImages from "./CursorImages/CursorImages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faLinkedinIn, faGithub, faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faLinkedinIn, faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import {faLink} from "@fortawesome/free-solid-svg-icons"
 const About = () => {
   return (
@@ -57,11 +57,10 @@ const About = () => {
 
             <div className={style.SocialIcons}>
 
-<div className={style.oneIcon} id={style.idConFace}   ><a href="https://www.facebook.com/ahmed.egyptian.9889" target="_blank" rel="noopener noreferrer" title="Facebook" className={style.defineIcon} id={style.idFacebook}>  <FontAwesomeIcon className={style.iconSelf} icon={faFacebookF} />  </a></div>
-<div className={style.oneIcon} id={style.idConFace}   ><a href="https://www.instagram.com/ahmed514essam?igsh=NnpnbzV6aXBiMHE5" target="_blank" rel="noopener noreferrer" title="Instagram" className={style.defineIcon} id={style.idFacebook}>   <FontAwesomeIcon icon={faInstagram} />  </a></div>
-<div className={style.oneIcon} id={style.idConLink}><a href="https://www.linkedin.com/in/ahmed-essam-618055230" target="_blank" rel="noopener noreferrer" title="LinkedIn" className={style.defineIcon} id={style.idLinkedin}>  <FontAwesomeIcon className={style.iconSelf} icon={faLinkedinIn} />  </a></div>
-<div className={style.oneIcon} id={style.idConGithup}><a href="https://github.com/ahmed514essam" target="_blank" rel="noopener noreferrer" title="GitHub" className={style.defineIcon} id={style.idGithup}>  <FontAwesomeIcon className={style.iconSelf} icon={faGithub} />  </a></div>
-<div className={style.oneIcon} id={style.idConWhats}><a href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" rel="noopener noreferrer" title="WhatsApp" className={style.defineIcon} id={style.idWhatsApp}>  <FontAwesomeIcon className={style.iconSelf} icon={faWhatsapp} />  </a></div>
+<div className={style.oneIcon} id={style.idConFace}   ><a rel="noopener noreferrer"  href="https://www.facebook.com/ahmed.egyptian.9889" target="_blank" className={style.defineIcon} id={style.idFacebook} title="Visit Facebook">  <FontAwesomeIcon className={style.iconSelf} icon={faFacebookF} />  </a></div>
+<div className={style.oneIcon} id={style.idConLink}><a rel="noopener noreferrer" href="https://www.linkedin.com/in/ahmed-essam-618055230" target="_blank" className={style.defineIcon} id={style.idLinkedin} title="Visit LinkedIn">  <FontAwesomeIcon className={style.iconSelf} icon={faLinkedinIn} />  </a></div>
+<div className={style.oneIcon} id={style.idConGithup}><a rel="noopener noreferrer" href="https://github.com/ahmed514essam" target="_blank" className={style.defineIcon} id={style.idGithup} title="Visit GitHub">  <FontAwesomeIcon className={style.iconSelf} icon={faGithub} />  </a></div>
+<div className={style.oneIcon} id={style.idConWhats}><a rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" className={style.defineIcon} id={style.idWhatsApp} title="Contact via WhatsApp">  <FontAwesomeIcon className={style.iconSelf} icon={faWhatsapp} />  </a></div>
 
 
 </div>
@@ -85,7 +84,7 @@ const About = () => {
                 Who am I<span>?</span>
               </h2>
               <p>
-      Hello Everyone!  My name is Ahmed Essam El sayed, and I'm a Full Stack Web Developer with a strong focus on Backend Development using ASP.NET technologies.
+       Hello Everyone!  My name is Ahmed Essam Elsayed, and I am a Full Stack Web Developer with a strong focus on Backend Development using ASP.NET technologies.
 I hold a Bachelor's degree in Computer Science with a "Very Good" grade, and I graduated with distinction in my graduation project, which focused on detecting plant diseases using Machine Learning.
 With over a year of hands-on experience, I have transitioned from frontend development with React to building robust, secure, and scalable backend systems.
 I specialize in developing high-performance web applications using ASP.NET, Entity Framework, MVC, and RESTful APIs. I have solid experience implementing secure authentication using JWT, managing relational databases with SQL Server, and applying Clean Code principles and Design Patterns to build maintainable and efficient systems.
@@ -98,8 +97,9 @@ I am currently seeking opportunities where I can contribute to building high-qua
             <div className={style.educations}>
               <h2>Education :- </h2>
               <p>
-                studies a Bachelor's degree in Computer Science at the Future
-                Academy for Specialized Technological Sciences. 2021- 2025
+               Bachelor's degree in Computer Science with C+ grade, and I graduated with distinction in
+                 at the Future Academy for Specialized Technological Sciences. 2021- 2025
+               <p> Graduation Project : A </p>
               </p>
             </div>
 
@@ -107,9 +107,19 @@ I am currently seeking opportunities where I can contribute to building high-qua
               <h2>Certificates :-</h2>
               <p>
                 Eraasoft certified Frontend Web Developer
-                
               </p>
-              <a href="https://drive.google.com/file/d/1DH96jq-mVLTynMliffdSOQdJL2dHR5ey/view" target="_blank" rel="noopener noreferrer" className={style.openCertificate}><FontAwesomeIcon icon={faLink} /> Open</a>
+              <a rel="noopener noreferrer" href="https://drive.google.com/file/d/1DH96jq-mVLTynMliffdSOQdJL2dHR5ey/view" target="_blank" className={style.openCertificate} title="Open Certificate"><FontAwesomeIcon icon={faLink} /> Open</a>
+                 <p>
+
+ ITIDA certified Entrepreneurship 
+              </p>
+                            <a rel="noopener noreferrer" href="https://drive.google.com/file/d/1QJNPEuae3fM2aByn8sJ5KDGYdE8diNZH/view" target="_blank" className={style.openCertificate} title="Open Certificate"><FontAwesomeIcon icon={faLink} /> Open</a>
+              <p>
+
+JavaScript Specialist Certification
+
+              </p>
+                            <a rel="noopener noreferrer" href="https://drive.google.com/file/d/1z6ZWJReEgtXzi3JwjhdFHQdDBdQD5-HB/view" target="_blank" className={style.openCertificate} title="Open Certificate"><FontAwesomeIcon icon={faLink} /> Open</a>
             </div>
            {/* </span> */}
 

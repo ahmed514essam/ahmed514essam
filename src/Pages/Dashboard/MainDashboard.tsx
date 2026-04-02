@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./MainDashboard.module.css";
-import { useEffect } from "react";
-
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -14,25 +12,6 @@ const Dashboard = () => {
 //     }
 //   }, []);
 
-
-
-
-
-
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (!token) {
-      navigate("/login");
-    }
-  }, []);
-
-
-
-
-
-
   return (
     <div className={styles.dashboard}>
       <div className={styles.overlay}></div>
@@ -42,37 +21,27 @@ const Dashboard = () => {
 
         <div className={styles.cards}>
           {/* 👇 الجديد */}
-          <div className={styles.card} onClick={() => navigate("/addhome")}>
-            <h2>Add Home </h2>
-            <p>Add main page content</p>
-          </div>
-
-  <div className={styles.card} onClick={() => navigate("/edithome")}>
+          <div className={styles.card} onClick={() => navigate("/home")}>
             <h2>Home Page</h2>
             <p>Edit main page content</p>
           </div>
 
-          <div className={styles.card} onClick={() => navigate("/addabout")}>
-            <h2>Add About</h2>
-            <p>Add your personal info</p>
-          </div>
-
-          <div className={styles.card} onClick={() => navigate("/editabout")}>
+          <div className={styles.card} onClick={() => navigate("/about")}>
             <h2>About</h2>
             <p>Edit your personal info</p>
           </div>
 
-          <div className={styles.card} onClick={() => navigate("/showProjects")}>
+          <div className={styles.card} onClick={() => navigate("/projects")}>
             <h2>Projects</h2>
             <p>Manage your projects</p>
           </div>
 
-          <div className={styles.card} onClick={() => navigate("/showSkills")}>
+          <div className={styles.card} onClick={() => navigate("/skills")}>
             <h2>Skills</h2>
             <p>Update your skills</p>
           </div>
 
-          <div className={styles.card} onClick={() => navigate("/all-certificates")}>
+          <div className={styles.card} onClick={() => navigate("/certificates")}>
             <h2>Certificates</h2>
             <p>Edit certificates</p>
           </div>

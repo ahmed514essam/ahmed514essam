@@ -154,7 +154,7 @@ null
 </div>
 
 <div className={style.cityFraction}>
-<select id="country"aria-placeholder="Country"  name="city" value={city} onChange={(e) => setCity(e.target.value)} >
+<select id="country" name="city" title="Select your country" value={city} onChange={(e) => setCity(e.target.value)} >
     <option value="" disabled selected >Country</option>
     <option value="Afghanistan">Afghanistan</option>
     <option value="Albania">Albania</option>
@@ -369,7 +369,7 @@ Google
   Account
   <span><FontAwesomeIcon className={style.arroIcon} icon={faArrowRight} /></span>
   </a>
-<a href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" className={style.whatsAcc}>WhatsApp</a>
+<a href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" rel="noopener noreferrer" className={style.whatsAcc}>WhatsApp</a>
 </div>
 </div>
 

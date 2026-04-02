@@ -1,10 +1,10 @@
 import { useState } from "react";
-import style from "./Skills.module.css";
+import style from "./Skill.module.css";
 import AllSkills from "./AllSkills/AllSkills";
 import FrontendSkills from "./FrontendSkills/FrontendSkills";
 import ProgrammingSkills from "./ProgrammingSkills/ProgrammingSkills";
 import "./Skily.css" ;
-import BackendSkills from "./BackendSkills/BackendSkill";
+import BackendSkills from "./BackendSkills/BackendSkills";
 
 const Skills = () => {
 const [ category , setCategory ] = useState<number>(1);

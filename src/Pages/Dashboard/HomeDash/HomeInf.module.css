@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,13 +30,4 @@
   border-radius: 8px;
   background: #38bdf8;
   cursor: pointer;
-}
-.backButton
-{
-  background-color: #a7a7a7;
-  color: #041b34;
-}
-.backButton:hover
-{
-  background-color: #4d4d4d;
 }
