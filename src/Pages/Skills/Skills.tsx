@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./Skill.module.css";
+import style from "./Skills.module.css";
 import AllSkills from "./AllSkills/AllSkills";
 import FrontendSkills from "./FrontendSkills/FrontendSkills";
 import ProgrammingSkills from "./ProgrammingSkills/ProgrammingSkills";
