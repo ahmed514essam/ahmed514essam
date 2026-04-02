@@ -44,10 +44,10 @@ A software developer specializing in front-end development with React JS and Nex
 
 <div className={style.SocialIcons}>
 
-<div className={style.oneIcon} id={style.idConFace}   ><a href="https://www.facebook.com/ahmed.egyptian.9889" target="_blank" className={style.defineIcon} id={style.idFacebook}>  <FontAwesomeIcon className={style.iconSelf} icon={faFacebookF} />  </a></div>
-<div className={style.oneIcon} id={style.idConLink}><a href="https://www.linkedin.com/in/ahmed-essam-618055230" target="_blank" className={style.defineIcon} id={style.idLinkedin}>  <FontAwesomeIcon className={style.iconSelf} icon={faLinkedinIn} />  </a></div>
-<div className={style.oneIcon} id={style.idConGithup}><a  href="https://github.com/ahmed514essam" target="_blank" className={style.defineIcon} id={style.idGithup}>  <FontAwesomeIcon className={style.iconSelf} icon={faGithub} />  </a></div>
-<div className={style.oneIcon} id={style.idConWhats}><a href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" className={style.defineIcon} id={style.idWhatsApp}>  <FontAwesomeIcon className={style.iconSelf} icon={faWhatsapp} />  </a></div>
+<div className={style.oneIcon} id={style.idConFace}   ><a href="https://www.facebook.com/ahmed.egyptian.9889" target="_blank" rel="noopener noreferrer" title="Facebook" className={style.defineIcon} id={style.idFacebook}>  <FontAwesomeIcon className={style.iconSelf} icon={faFacebookF} />  </a></div>
+<div className={style.oneIcon} id={style.idConLink}><a href="https://www.linkedin.com/in/ahmed-essam-618055230" target="_blank" rel="noopener noreferrer" title="LinkedIn" className={style.defineIcon} id={style.idLinkedin}>  <FontAwesomeIcon className={style.iconSelf} icon={faLinkedinIn} />  </a></div>
+<div className={style.oneIcon} id={style.idConGithup}><a  href="https://github.com/ahmed514essam" target="_blank" rel="noopener noreferrer" title="GitHub" className={style.defineIcon} id={style.idGithup}>  <FontAwesomeIcon className={style.iconSelf} icon={faGithub} />  </a></div>
+<div className={style.oneIcon} id={style.idConWhats}><a href="https://api.whatsapp.com/send?phone=+201094461846&text=Hi" target="_blank" rel="noopener noreferrer" title="WhatsApp" className={style.defineIcon} id={style.idWhatsApp}>  <FontAwesomeIcon className={style.iconSelf} icon={faWhatsapp} />  </a></div>
 
 
 </div>
@@ -88,7 +88,7 @@ Between Two Halfs
 
 
 
-<img src={PersonalImage} />
+<img src={PersonalImage} alt="Ahmed Essam El Sayed" />
 
 
 

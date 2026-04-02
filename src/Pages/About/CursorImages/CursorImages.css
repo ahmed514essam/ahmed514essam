@@ -1,20 +1,467 @@
-.imagecont {
-object-fit: cover;
-width: 100%;
-height: 100%;
-border-radius: 10px;
+
+.contentHomePage {
+    margin-top: 70px;
+    height: 100vh;
+    width: 100%;
+    background-color: hsla(207, 62%, 9%, 0.997) ;
+    
+      display: flex;
+      flex-direction: row;
+      
 }
-.imagecont img {
-    border-radius: 10px;
+.contentHomePage .imageHalf {
+width: 50%;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
-.imgy {
-    height: 100%;object-fit: cover;
+.contentHomePage .detailsHalf {
+width: 50%;
+display: flex;
+align-items: center;
+height: auto;
 }
-.changePicture {
-    background-color: rgb(74, 74, 74);
-    height: 60px;
-    width: 35px;
-    bottom: 0;
-    margin: auto;
-border-radius: 12px;
+
+.detaisInfo {
+    width: 90%;
+height: auto;
+padding-left: 80px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+cursor: pointer;
 }
+.detailsHalf h1 {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+.helloMessage {
+    color: rgb(230, 230, 230);
+}
+.jopMessage {
+    color: white;
+}
+.spanJopTitle {
+    color: rgb(70, 177, 196);
+}
+.detailsHalf p {
+    color: rgb(230, 230, 230);
+    letter-spacing: 2px;
+    font-weight: 500;
+    width: 100%;
+}
+.SocialIcons {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.oneIcon {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid rgb(71, 103, 126);
+cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(46, 89, 97) ,  rgb(165, 227, 238));
+transition: 1s ease;
+
+}
+.defineIcon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(35, 46, 54);
+
+}
+.iconSelf {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+.oneIcon:hover {
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+.contentImge {
+    width: 360px ;
+    height: 380px;
+    background-image: linear-gradient(to right, rgba(9, 25, 38, 0.997)  , rgba(12, 35, 54, 0.997) );
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 15px 10px 10px  rgb(70, 177, 196); 
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.contentImge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#idConFace:hover #idFacebook {
+    background-color: blue;
+}
+#idConLink:hover #idLinkedin {
+    background-color: rgb(7, 7, 161);
+}
+#idConGithup:hover #idGithup {
+    background-color: rgb(131, 21, 137);
+}
+#idConWhats:hover #idWhatsApp {
+    background-color: green;
+}
+.sectionDownload {
+    width: 50%;
+    border-radius:30px;
+    padding: 13px 13px;
+    background-color:rgb(35, 46, 54);
+  
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(49, 176, 199);
+    color: white;
+}
+.sectionDownload a {
+    color: white;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1.1em;
+}
+.sectionDownload:hover {
+    opacity: 80%;
+}
+@media screen and (min-width:1170px) and (max-width:1285px) {
+    .contentHomePage {
+        height: 100vh;
+        margin-bottom:0px ;
+    }
+    .contentHomePage .imageHalf {
+        width: 40%;
+        }
+        .contentHomePage .detailsHalf {
+        width: 60%;
+        }
+        
+}
+@media (max-width:1170px) {
+    .contentHomePage {
+        margin-top: 70px;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        background-color: hsla(207, 62%, 9%, 0.997) ;
+        
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          padding: 10px 0px 70px 0px ;
+          margin-bottom:0px ;
+
+    }
+    .contentHomePage .imageHalf {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    
+    }
+    .contentHomePage .detailsHalf {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    }
+    .detaisInfo { 
+        padding-bottom: 50px;
+    }
+}
+@media (max-width:795px) {
+    
+    .contentHomePage {
+        margin-top: 70px;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        background-color: hsla(207, 62%, 9%, 0.997) ;
+        
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          padding: 10px 0px 70px 0px ;
+          margin-bottom:0px ;
+
+    }
+    .contentHomePage .imageHalf {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    
+    }
+    .contentHomePage .detailsHalf {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    }
+
+
+}
+@media (max-width:658px) {
+    .contentHomePage .imageHalf {width: 90%; margin: auto;}
+    .contentHomePage .detailsHalf {width: 99%; margin: auto; padding-left: 5px;}
+    .detaisInfo {
+        width: 100%;
+    height: 80%;
+    padding-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    cursor: pointer;
+    }
+}
+@media (max-width:461px) {
+    
+.contentImge {
+    width: 280px ;
+    height: 290px;
+  }
+  .detaisInfo {
+    width: 99%;
+height: 80%;
+padding-left: 10px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+cursor: pointer;
+}
+.detailsHalf h1 {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+
+}
+.detaisInfo p {
+    font-size: .9em;
+    width: 100%;
+}
+.helloMessage {
+    color: rgb(230, 230, 230);
+}
+.jopMessage {
+    color: white;
+}
+.spanJopTitle {
+    color: rgb(70, 177, 196);
+}
+.detailsHalf p {
+    color: rgb(230, 230, 230);
+    letter-spacing: 2px;
+    font-weight: 500;
+    width: 100%;
+}
+.SocialIcons {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+.oneIcon {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid rgb(71, 103, 126);
+cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(46, 89, 97) ,  rgb(165, 227, 238));
+transition: 1s ease;
+
+}
+.defineIcon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(35, 46, 54);
+
+}
+.iconSelf {
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.sectionDownload {
+    width: 90%;
+    border-radius:30px;
+    padding: 13px 13px;
+    background-color:rgb(35, 46, 54);
+  
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(49, 176, 199);
+    color: white;
+}
+.sectionDownload a {
+    color: white;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1.1em;
+}
+
+}
+
+@media (max-width:376px) {
+    .SocialIcons {
+        display: flex;
+        flex-direction: row;
+        width: 99%;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+    .oneIcon {
+        width: 55px;
+        height: 55px;
+        border: 2px solid white;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border: 2px solid rgb(71, 103, 126);
+    cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to right, rgb(46, 89, 97) ,  rgb(165, 227, 238));
+    transition: 1s ease;
+    
+    }
+    .defineIcon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        text-decoration: none;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgb(35, 46, 54);
+    
+    }
+    .iconSelf {
+        color: white;
+        font-size: 1.8em;
+        font-weight: 700;
+    }
+}
+
+
+@media (max-width:346px) {
+    
+    .contentImge {
+        width: 240px ;
+        height: 250px;
+        background-image: linear-gradient(to right, rgba(9, 25, 38, 0.997)  , rgba(12, 35, 54, 0.997) );
+    
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50% 50% 50% 50%;
+        box-shadow: 15px 10px 10px  rgb(70, 177, 196); 
+        overflow: hidden;
+    }
+    .detailsHalf h1 {
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: 700;
+        font-size: 1.5em;
+    
+    }
+    .jopMessage {
+font-size: 1.4em;
+    }
+    }
+.sectionDownload a {
+    text-decoration: none;
+}    
+    
+@media (max-width:1163px) {
+    .contentHomePage {
+        margin-bottom: 00px;
+    }
+            }
+    
